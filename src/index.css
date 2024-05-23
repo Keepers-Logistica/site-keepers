@@ -96,6 +96,32 @@ button{
   }
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #F0F0F0;
+  border-radius: 15px;
+}
+
 .font-title {
   font-family: "Poppins", sans-serif;
+}
+
+.bg-decorator-home{
+  background-image: url('./assets/decorators/square-grey.svg');
+  width: 100%;
+  height: 100%;
+}
+
+.bg-hero{
+  background-image: url('./assets/images/hero.jpg');
+  width: 100%;
+  height: 100%;
+}
+
+.bg-integrador{
+  background-image: url('./assets/images/card-integrador.png');
 }
