@@ -63,6 +63,8 @@ body{
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -102,8 +104,13 @@ button{
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #F0F0F0;
+  box-shadow: inset 0 0 5px #f0f0f0;
   border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FC5C04;
+  border-radius: 6px;
 }
 
 .font-title {
@@ -113,15 +120,41 @@ button{
 .bg-decorator-home{
   background-image: url('./assets/decorators/square-grey.svg');
   width: 100%;
-  height: 100%;
+  height: 750px;
 }
 
 .bg-hero{
   background-image: url('./assets/images/hero.jpg');
   width: 100%;
-  height: 100%;
+  height: 750px;
+  background-repeat: no-repeat;
+
 }
 
 .bg-integrador{
   background-image: url('./assets/images/card-integrador.png');
+}
+
+.mySwiper {
+  max-width: 1440px;
+  height: 300px;
+}
+
+.swiper-slide {
+  width: 200px;
+  background-color: transparent;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+
+
+#root > main > section > div.overflow-hidden.relative > div > div > div.swiper.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-watch-progress.mySwiper > div.swiper-wrapper > div.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active > div.swiper-slide-shadow-left.swiper-slide-shadow-coverflow{
+  border-radius: 12px;
+}
+
+#root > main > section > div.overflow-hidden.relative > div > div > div.swiper.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-watch-progress.mySwiper > div.swiper-wrapper > div > div.swiper-slide-shadow-right.swiper-slide-shadow-coverflow{
+  border-radius: 12px;
 }

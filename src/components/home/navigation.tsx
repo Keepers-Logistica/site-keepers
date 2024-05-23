@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import LogoKeepers from '@/assets/images/logo-keepers.svg'
 import { cn } from '@/lib/utils'
 
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,7 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from './ui/navigation-menu'
+} from '../ui/navigation-menu'
 
 interface ListItemProps {
   children: ReactNode
