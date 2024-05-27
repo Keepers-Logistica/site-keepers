@@ -1,4 +1,6 @@
 import { CaretDown } from '@phosphor-icons/react'
+import { motion } from 'framer-motion'
+import { Typewriter } from 'react-simple-typewriter'
 
 import { Button } from '../ui/button'
 import { Navigation } from './navigation'
@@ -13,14 +15,33 @@ export function HeroSection() {
           <section className="mt-32 flex flex-col items-center justify-center ">
             <div className="flex items-end justify-center">
               <div className="font-title text-center text-4xl font-semibold text-white">
-                <span className="text-[#FF9C66]">Integrando</span> soluções{' '}
-                <br /> Logisticas para o seu negócio
+                <h1 className="mb-4">
+                  Keepers sempre <br />
+                </h1>
+                <span className="text-[#FFC9AB]">
+                  <Typewriter
+                    words={[
+                      'Evoluindo negócios !',
+                      'Otimizando processos !',
+                      'Enviando pedidos !',
+                      'Integrando pedidos !',
+                    ]}
+                    loop={5}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </span>
               </div>
-              <figure className="mb-2 ml-2 h-3 w-3 rounded-sm bg-primary" />
+              {/* <figure className="mb-2 ml-2 h-3 w-3 rounded-sm bg-primary" /> */}
             </div>
-            <Button className="font-title mt-11 px-6 py-5 font-semibold">
-              Nossos serviços
-            </Button>
+            <motion.div whileTap={{ scale: 0.85 }}>
+              <Button className="font-title mt-11 px-6 py-5 font-semibold">
+                Nossos serviços
+              </Button>
+            </motion.div>
           </section>
         </div>
         <div className="absolute bottom-0 flex w-full items-center justify-center">

@@ -1,7 +1,9 @@
+import Counter from '../counter'
+
 export function NumbersSection() {
   return (
-    <section className="mb-16 flex h-56 w-full items-center justify-evenly bg-zinc-200 px-20">
-      <div className="flex flex-col items-center justify-center">
+    <section className="z-10 mb-16 flex h-56 w-full items-center justify-evenly bg-zinc-200 px-20">
+      <div className="z-10 flex w-[250px]  flex-col items-center justify-center ">
         <span className="text-center font-bold text-zinc-400">desde</span>
         <h1 className="font-title text-6xl font-extrabold text-[#464646]">
           1996
@@ -10,19 +12,19 @@ export function NumbersSection() {
           realizando <br /> operações
         </span>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex w-[250px] flex-col items-center justify-center">
         <span className="text-center font-bold text-zinc-400">mais de</span>
         <h1 className="font-title text-6xl font-extrabold text-[#FF5D04]">
-          +5,200
+          + <Counter value={5200} comma />
         </h1>
         <span className="mt-2 text-center font-bold leading-5 text-zinc-400">
           produtos <br /> armazenados
         </span>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex w-[250px] flex-col items-center justify-center">
         <span className="text-center font-bold text-zinc-400">mais de</span>
         <h1 className="font-title text-6xl font-extrabold text-[#FF5D04]">
-          +8,600
+          + <Counter value={8600} comma />
         </h1>
         <span className="mt-2 text-center font-bold leading-5 text-zinc-400">
           mercadorias <br /> movimentadas

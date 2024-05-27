@@ -5,16 +5,14 @@ import 'swiper/css/pagination'
 import {
   Archive,
   Bag,
-  CaretLeft,
-  CaretRight,
   ForkKnife,
   Gear,
   Graph,
   Hospital,
   ShoppingCart,
 } from '@phosphor-icons/react'
-import { ReactNode, useState } from 'react'
-import { EffectCoverflow } from 'swiper/modules'
+import { ReactNode } from 'react'
+import { Autoplay, EffectCoverflow, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import autoPartsImg from '@/assets/images/carousel/autoparts.jpg'
@@ -24,6 +22,8 @@ import foodsImg from '@/assets/images/carousel/foods.jpg'
 import graphImg from '@/assets/images/carousel/graph.jpg'
 import hospitalImg from '@/assets/images/carousel/hospital.jpg'
 import suprimentsImg from '@/assets/images/carousel/supriments.jpg'
+
+import { TitleHeader } from '../title-header'
 
 interface Slides {
   id: number
@@ -78,31 +78,19 @@ const slides: Slides[] = [
 ]
 
 export function SegmentsSection() {
-  const [slideIndex, setSlideIndex] = useState(1)
-
-  const currentItem = slides.find((slide) => slide.id === slideIndex)
-
   return (
-    <div className="mb-16">
-      <div className="mb-40 flex flex-col items-center justify-center">
-        <h1 className="font-title text-5xl font-semibold text-[#391805]">
-          Segmentos
-        </h1>
-        <figure className="mt-4 h-2 w-52 rounded-sm bg-primary" />
-      </div>
-      <div className=" bg-[#FF8B4D] pb-10">
+    <div className="relative mb-16">
+      <TitleHeader title="Segmentos" className="mb-40 " />
+      <div className="bg-[#FF8B4D] pb-24">
         <div className="flex flex-col items-center justify-center">
           <Swiper
-            onRealIndexChange={({ activeIndex }) =>
-              setSlideIndex(activeIndex + 1)
-            }
+            navigation
+            modules={[EffectCoverflow, Autoplay, Navigation]}
             pagination={{
               clickable: true,
             }}
-            autoplay
-            navigation={true}
-            modules={[EffectCoverflow]}
             className="mySwiper -mt-28"
+            autoplay
             effect={'coverflow'}
             coverflowEffect={{
               rotate: 10,
@@ -127,25 +115,19 @@ export function SegmentsSection() {
             }}
           >
             {slides.map((slide, index) => (
-              <SwiperSlide key={index} className="overflow-hidden rounded-xl">
-                <div className="h-full rounded-xl bg-red-300">
-                  <img
-                    src={slide.img}
-                    alt={slide.name}
-                    className="cursor-grab select-none rounded-xl"
-                  />
-                </div>
-              </SwiperSlide>
+              <div key={index}>
+                <SwiperSlide className="h-full overflow-hidden rounded-xl">
+                  <div className="h-full rounded-xl">
+                    <img
+                      src={slide.img}
+                      alt={slide.name}
+                      className="z-10 cursor-grab select-none rounded-xl"
+                    />
+                  </div>
+                </SwiperSlide>
+              </div>
             ))}
           </Swiper>
-          <div className="mt-8 flex items-center gap-4">
-            <CaretLeft className="h-6 w-6" color="white" />
-            <div className="rounded-lg border-2 p-1">{currentItem?.icon}</div>
-            <h4 className="font-title  text-3xl font-bold text-white">
-              {currentItem?.name}
-            </h4>
-            <CaretRight className="h-6 w-6" color="white" />
-          </div>
         </div>
       </div>
     </div>

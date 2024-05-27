@@ -137,7 +137,7 @@ button{
 
 .mySwiper {
   max-width: 1440px;
-  height: 300px;
+  height: 380px;
 }
 
 .swiper-slide {
@@ -149,6 +149,13 @@ button{
   color: #ffffff;
 }
 
+.text-decorator {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke: 3px #FFC9AB;
+  user-select: none;
+  z-index: 0;
+  pointer-events: none;
+}
 
 
 #root > main > section > div.overflow-hidden.relative > div > div > div.swiper.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-watch-progress.mySwiper > div.swiper-wrapper > div.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active > div.swiper-slide-shadow-left.swiper-slide-shadow-coverflow{
@@ -157,4 +164,8 @@ button{
 
 #root > main > section > div.overflow-hidden.relative > div > div > div.swiper.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-watch-progress.mySwiper > div.swiper-wrapper > div > div.swiper-slide-shadow-right.swiper-slide-shadow-coverflow{
   border-radius: 12px;
+}
+
+#root > main > section > div.overflow-hidden.relative.block > div > div{
+  display: block !important;
 }
