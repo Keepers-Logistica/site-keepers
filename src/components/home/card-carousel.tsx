@@ -16,7 +16,7 @@ export function CardCarousel({
   topics,
 }: CardCarouselProps) {
   return (
-    <Card className="m-auto grid w-[1100px] grid-cols-2 rounded-[20px]">
+    <Card className="m-auto grid  h-full grid-cols-2 rounded-[20px]">
       <div className="col-span-1 p-12">
         <div className="flex flex-col justify-start">
           <h4 className="font-title flex items-end text-2xl font-semibold text-[#391805]">

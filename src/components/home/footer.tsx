@@ -12,8 +12,8 @@ import { Separator } from '../ui/separator'
 
 export function Footer() {
   return (
-    <footer className="bg-[#2C2C2C] pt-16">
-      <section className="mx-20 grid grid-cols-12 pb-52">
+    <footer className="bg-[#2C2C2C] px-20 pt-16">
+      <section className="m-auto  grid max-w-[1440px] grid-cols-12 pb-52">
         <div className="col-span-5 flex flex-col">
           <img
             src={LogoKeepersImg}

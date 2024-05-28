@@ -23,7 +23,7 @@ export function Home() {
   }, [])
 
   return (
-    <ScrollArea className="relative block">
+    <ScrollArea className="relative m-auto block">
       <motion.div
         style={{ perspective: 800 }}
         initial={{ opacity: 0, rotateX: '30deg' }}

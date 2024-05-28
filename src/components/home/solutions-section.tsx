@@ -14,6 +14,8 @@ import {
 } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 import { ReactNode, useRef, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { Element } from 'react-scroll'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -42,6 +44,8 @@ interface SwiperRef {
 
 export function SoluctionSection() {
   const swiperRef = useRef<SwiperRef>(null)
+
+  const { ref, inView } = useInView()
 
   const [buttons, setButtons] = useState<ButtonCarousel[]>([
     {
@@ -218,53 +222,70 @@ export function SoluctionSection() {
     )
   }
   return (
-    <div className="relative mb-16">
-      <span className="text-decorator absolute right-0 z-0 -mr-[350px] mt-[300px] rotate-90 text-[220px] text-white opacity-30">
-        KEEPERS
-      </span>
-      <div className="z-10 mb-16 flex flex-col items-center justify-center">
-        <h1 className="font-title text-5xl font-semibold text-[#391805]">
-          Serviços & Soluções
-        </h1>
-        <figure className="mt-4 h-2 w-52 rounded-sm bg-primary" />
-      </div>
+    <Element name="solutions">
+      <div className="relative mb-16">
+        <span className="text-decorator absolute right-0 z-0 -mr-[350px] mt-[300px] rotate-90 text-[220px] text-white opacity-30">
+          KEEPERS
+        </span>
+        <div className="z-10 mb-16 flex flex-col items-center justify-center">
+          <h1 className="font-title text-5xl font-semibold text-[#391805]">
+            Serviços & Soluções
+          </h1>
+          <figure className="mt-4 h-2 w-52 rounded-sm bg-primary" />
+        </div>
 
-      <section>
-        <Swiper
-          ref={swiperRef}
-          modules={[Autoplay]}
-          slidesPerView={1}
-          onSlideChange={handleSlideChange}
-          className="z-10 mb-10"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+        <section className="m-auto max-w-[1100px] overflow-visible">
+          <Swiper
+            ref={swiperRef}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              stopOnLastSlide: false,
+              waitForTransition: true,
+            }}
+            speed={1000}
+            centeredSlides={true}
+            onSlideChange={handleSlideChange}
+            className="z-10 mb-16 !overflow-visible"
+            spaceBetween={70}
+          >
+            {slides.map((slide) => (
+              <SwiperSlide key={slide.id}>
+                <CardCarousel
+                  img={slide.img}
+                  title={slide.title}
+                  description={slide.description}
+                  topics={slide.topics}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </section>
+
+        <section
+          ref={ref}
+          className="z-50 m-auto grid max-w-[1440px] grid-cols-4 gap-8 px-20"
         >
-          {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <CardCarousel
-                img={slide.img}
-                title={slide.title}
-                description={slide.description}
-                topics={slide.topics}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-
-      <section className="z-50 grid grid-cols-4 gap-8 px-20">
-        {buttons.map((button) => (
-          <motion.div key={button.id} whileTap={{ scale: 0.85 }}>
-            <Button
-              variant={button.active ? 'default' : 'outline'}
-              className="font-title z-50 h-28 w-full text-base"
-              onClick={() => handleSetItem(button.id)}
+          {buttons.map((button) => (
+            <motion.div
+              key={button.id}
+              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+              transition={{ duration: 0.5 }}
             >
-              {button.icon}
-              {button.label}
-            </Button>
-          </motion.div>
-        ))}
-      </section>
-    </div>
+              <Button
+                variant={button.active ? 'default' : 'outline'}
+                className="font-title z-50 h-28 w-full text-base"
+                onClick={() => handleSetItem(button.id)}
+              >
+                {button.icon}
+                {button.label}
+              </Button>
+            </motion.div>
+          ))}
+        </section>
+      </div>
+    </Element>
   )
 }

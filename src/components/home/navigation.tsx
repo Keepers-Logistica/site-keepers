@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 import LogoKeepers from '@/assets/images/logo-keepers.svg'
 import { cn } from '@/lib/utils'
@@ -90,21 +91,27 @@ export function Navigation() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white">
-                Soluções
+                <Link to="solutions" spy={true} smooth={true} duration={500}>
+                  Soluções
+                </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {solutions.map((solution) => (
-                    <ListItem key={solution.title} title={solution.title}>
-                      {solution.description}
-                    </ListItem>
-                  ))}
-                </ul>
+                <Link to="solutions" spy={true} smooth={true} duration={500}>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {solutions.map((solution) => (
+                      <ListItem key={solution.title} title={solution.title}>
+                        {solution.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </Link>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white">
-                Nosso sistema
+                <Link to="integrador" spy={true} smooth={true} duration={500}>
+                  Nosso sistema
+                </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -137,17 +144,23 @@ export function Navigation() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
-                Segmentos
+                <Link to="segments" spy={true} smooth={true} duration={500}>
+                  Segmentos
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
-                Contato
+                <Link to="contact" spy={true} smooth={true} duration={500}>
+                  Contato
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
-                Conheça nos
+                <Link to="about-me" spy={true} smooth={true} duration={500}>
+                  Conheça nos
+                </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent></NavigationMenuContent>
             </NavigationMenuItem>
@@ -155,9 +168,9 @@ export function Navigation() {
         </NavigationMenu>
 
         <Button className="font-title ml-2 h-7 rounded-full bg-primary px-5 text-xs font-bold text-[#391805]">
-          <Link to="https://integrador.keepers.com.br" target="_blank">
+          <RouterLink to="https://integrador.keepers.com.br" target="_blank">
             ACESSAR SISTEMA
-          </Link>
+          </RouterLink>
         </Button>
       </nav>
     </div>

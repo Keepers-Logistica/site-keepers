@@ -15,8 +15,8 @@ import { SuportSection } from './suport-section'
 export function RoadSection() {
   const { ref, inView } = useInView()
   return (
-    <div ref={ref}>
-      <div className="mx-20">
+    <div ref={ref} className="m-auto max-w-[1440px]">
+      <div className=" mx-20 ">
         <TitleHeader title="Nossos Diferenciais" />
         <div className="relative flex grid-cols-12 items-center justify-center">
           <motion.img
