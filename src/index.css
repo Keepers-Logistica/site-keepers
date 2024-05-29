@@ -96,7 +96,9 @@ button{
   html{
     font-size: 87.5%;
   }
+ 
 }
+
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -141,19 +143,24 @@ button{
   height: 380px;
 }
 
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  overflow: visible !important;
+@media only screen and (max-width: 767px) {
+  .swiper {
+    width: 300px;
+    height: 320px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: -80px;
+  }
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
 
 .text-decorator {
   -webkit-text-stroke-width: 3px;
@@ -162,6 +169,7 @@ button{
   z-index: 0;
   pointer-events: none;
 }
+
 
 #root > main > section > div.overflow-hidden.relative.m-auto.block > div > div > div > div > div > section.m-auto.max-w-\[1100px\].overflow-visible > div > div > div.swiper-slide.swiper-slide-active{
   transition: 1.5s all;

@@ -1,6 +1,7 @@
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import 'swiper/css/effect-cards'
 
 import {
   Archive,
@@ -13,7 +14,12 @@ import {
 } from '@phosphor-icons/react'
 import { ReactNode } from 'react'
 import { Element } from 'react-scroll'
-import { Autoplay, EffectCoverflow, Navigation } from 'swiper/modules'
+import {
+  Autoplay,
+  EffectCards,
+  EffectCoverflow,
+  Navigation,
+} from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import autoPartsImg from '@/assets/images/carousel/autoparts.jpg'
@@ -80,12 +86,12 @@ const slides: Slides[] = [
 ]
 
 export function SegmentsSection() {
-  const { Desktop } = useResponsive()
+  const { Desktop, Mobile } = useResponsive()
   return (
     <Element name="segments">
       <div className="relative mb-16">
         <TitleHeader title="Segmentos" className="mb-40 " />
-        <div className="bg-[#FF8B4D] pb-24">
+        <div className="bg-[#FF8B4D] pb-0 lg:pb-24">
           <Desktop>
             <div className="flex flex-col items-center justify-center overflow-visible">
               <Swiper
@@ -141,6 +147,34 @@ export function SegmentsSection() {
               </Swiper>
             </div>
           </Desktop>
+          <Mobile>
+            <Swiper
+              effect={'cards'}
+              grabCursor={true}
+              modules={[EffectCards, Autoplay]}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+                stopOnLastSlide: false,
+                waitForTransition: true,
+              }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index}>
+                  <SwiperSlide className="overflow-hidden rounded-xl">
+                    <div className="h-full rounded-xl">
+                      <img
+                        src={slide.img}
+                        alt={slide.name}
+                        className="z-10 h-full cursor-grab select-none rounded-xl"
+                      />
+                    </div>
+                  </SwiperSlide>
+                </div>
+              ))}
+            </Swiper>
+          </Mobile>
         </div>
       </div>
     </Element>
