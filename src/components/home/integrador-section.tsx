@@ -2,6 +2,7 @@ import { Desktop as DesktopIcon, PlayCircle } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import ReactPlayer from 'react-player/lazy'
+import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
 import { Element } from 'react-scroll'
 
@@ -17,6 +18,9 @@ export function IntegradorSection() {
   const { ref, inView } = useInView()
 
   const { Desktop, Mobile } = useResponsive()
+
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
   return (
     <Element name="integrador">
       <section
@@ -67,35 +71,37 @@ export function IntegradorSection() {
               Além disso, você pode falar diretamente com nossos atendentes pelo
               chat para obter suporte imediato.
             </motion.p>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="font-title mt-11 bg-[#FF5D04] px-14 py-5 font-semibold">
-                  Ver vídeo <PlayCircle className="ml-2 h-5 w-5" />
+            <div className="flex flex-col lg:flex-row">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="font-title mt-11 w-fit bg-[#FF5D04] px-14 py-5 font-semibold">
+                    Ver vídeo <PlayCircle className="ml-2 h-5 w-5" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="m-0 flex w-fit items-center justify-center border-none bg-transparent p-0">
+                  <ReactPlayer
+                    url={videoKeepers}
+                    height={isMobile ? 200 : 695}
+                    width={1230}
+                    playing
+                    style={{
+                      overflow: 'hidden',
+                      borderRadius: '20px',
+                      boxShadow: '0px 0px 20px 10px rgba(255, 99, 71, 0.5)',
+                    }}
+                    controls={true}
+                  />
+                </DialogContent>
+              </Dialog>
+              <Link to="https://integrador.keepers.com.br">
+                <Button
+                  variant="outline"
+                  className="font-title mt-4 border-[#FF5D04] px-14 py-5 font-semibold text-[#FF5D04] hover:text-orange-400 lg:ml-3 lg:mt-11"
+                >
+                  Acessar <DesktopIcon className="ml-4 h-5 w-5 lg:ml-2" />
                 </Button>
-              </DialogTrigger>
-              <DialogContent className="m-0 flex w-fit items-center justify-center border-none bg-transparent p-0">
-                <ReactPlayer
-                  url={videoKeepers}
-                  height={695}
-                  width={1230}
-                  playing
-                  style={{
-                    overflow: 'hidden',
-                    borderRadius: '20px',
-                    boxShadow: '0px 0px 20px 10px rgba(255, 99, 71, 0.5)',
-                  }}
-                  controls={true}
-                />
-              </DialogContent>
-            </Dialog>
-            <Link to="https://integrador.keepers.com.br">
-              <Button
-                variant="outline"
-                className="font-title ml-3 mt-11 border-[#FF5D04] px-14 py-5 font-semibold text-[#FF5D04] hover:text-orange-400"
-              >
-                Acessar <DesktopIcon className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+              </Link>
+            </div>
           </motion.div>
           <div className="col-span-12 ml-0 lg:col-span-6 lg:ml-8">
             <Desktop>
