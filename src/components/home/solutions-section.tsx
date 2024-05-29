@@ -276,7 +276,7 @@ export function SoluctionSection() {
         ) : (
           <section
             ref={ref}
-            className="z-50 m-auto grid max-w-[1440px] grid-cols-1 gap-8 px-20 lg:grid-cols-4"
+            className="z-50 m-auto grid max-w-[1440px] grid-cols-1 gap-8 px-10 lg:grid-cols-4"
           >
             {buttonsSlide.map((button, index) => (
               <Drawer key={index}>

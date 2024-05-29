@@ -24,7 +24,7 @@ export function IntegradorSection() {
         className="m-auto mb-14 max-w-[1440px] overflow-visible lg:mb-52"
       >
         <TitleHeader title="Um Sistema 100% Online" className="mb-20" />
-        <div className="mx-20 grid grid-cols-12">
+        <div className="mx-10 grid grid-cols-12 lg:mx-20">
           <motion.div
             className="col-span-12 lg:col-span-6"
             initial={{ opacity: 0, y: 50 }}

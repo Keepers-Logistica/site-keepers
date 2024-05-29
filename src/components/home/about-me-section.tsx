@@ -15,7 +15,7 @@ export function AboutMeSection() {
   return (
     <Element name="about-me">
       <motion.div
-        className="z-10 m-auto my-16 grid max-w-[1440px] grid-cols-12 justify-between px-20"
+        className="z-10 m-auto my-16 grid max-w-[1440px] grid-cols-12 justify-between px-10 lg:px-20"
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}

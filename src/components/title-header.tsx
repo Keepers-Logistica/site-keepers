@@ -9,7 +9,7 @@ export function TitleHeader({ title, className }: TitleHeaderProps) {
   return (
     <div
       className={twMerge(
-        'flex flex-col items-center justify-center',
+        'flex flex-col items-center justify-center text-center',
         className,
       )}
     >

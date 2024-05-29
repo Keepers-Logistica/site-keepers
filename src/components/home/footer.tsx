@@ -13,7 +13,7 @@ import { Separator } from '../ui/separator'
 export function Footer() {
   return (
     <footer className="bg-[#2C2C2C]  pt-16">
-      <section className="m-auto grid max-w-[1440px] grid-cols-12 space-y-10 px-20 pb-52">
+      <section className="m-auto grid max-w-[1440px] grid-cols-12 space-y-10 px-10 pb-52 lg:px-20">
         <div className="col-span-12 flex flex-col lg:col-span-5">
           <img
             src={LogoKeepersImg}
@@ -87,10 +87,10 @@ export function Footer() {
       <Separator className="bg-[#D9D9D9] opacity-10" />
       <div className="font-title flex w-full items-center justify-center py-3 text-sm text-white">
         <div className="flex gap-2">
-          <span>
+          <span className="text-center">
             Copyright ©2024 Todos os direitos reservados | Keepers Logística
           </span>
-          <img src={Logo} alt="logo Keepers" />
+          <img src={Logo} alt="logo Keepers" className="hidden lg:flex" />
         </div>
       </div>
     </footer>

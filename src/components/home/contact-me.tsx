@@ -21,7 +21,7 @@ export function ContactMe() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <div className="z-10 mx-20 flex flex-col items-center justify-center">
+        <div className="z-10 mx-10 flex flex-col items-center justify-center lg:mx-20">
           <h4 className="font-title text-4xl font-bold text-white lg:text-5xl">
             Ficou interessado ?
           </h4>
