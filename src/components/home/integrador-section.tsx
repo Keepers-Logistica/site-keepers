@@ -115,14 +115,7 @@ export function IntegradorSection() {
               />
             </Desktop>
             <Mobile>
-              <motion.img
-                initial={{ opacity: 0, x: '100vw' }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 1, delay: 0.5 }}
-                src={IntegradorImg}
-                alt="system image"
-                className="mt-12"
-              />
+              <img src={IntegradorImg} alt="system image" className="mt-12" />
             </Mobile>
           </div>
         </div>
