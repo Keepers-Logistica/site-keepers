@@ -24,14 +24,14 @@ export function AboutMeSection() {
         <motion.img
           src={BuildingKeepersImage}
           alt="Prédio da Keepers"
-          className="col-span-5"
+          className="col-span-12 lg:col-span-5"
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         />
         <div className="col-span-1" />
         <motion.section
-          className="col-span-5 flex flex-col items-start"
+          className="col-span-12 mt-8 flex flex-col items-start lg:col-span-5 lg:mt-0"
           initial={{ opacity: 0, x: 50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -84,7 +84,7 @@ export function AboutMeSection() {
             <DialogContent className="m-0 flex w-fit items-center justify-center border-none bg-transparent p-0">
               <ReactPlayer
                 url="https://www.youtube.com/watch?v=Rdd6FLXW0bU"
-                height={900}
+                height={700}
                 width={1230}
                 playing
                 style={{

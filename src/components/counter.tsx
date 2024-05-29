@@ -4,14 +4,9 @@ import { useEffect, useRef } from 'react'
 interface CounterProps {
   value: number
   direction?: 'up' | 'down'
-  comma?: boolean
 }
 
-export default function Counter({
-  value,
-  direction = 'up',
-  comma = false,
-}: CounterProps) {
+export default function Counter({ value, direction = 'up' }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null)
   const motionValue = useMotionValue(direction === 'down' ? value : 0)
   const springValue = useSpring(motionValue, {

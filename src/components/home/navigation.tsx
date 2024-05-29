@@ -83,10 +83,10 @@ export function ListItem({ children, title }: ListItemProps) {
 
 export function Navigation() {
   return (
-    <div className="mt-20 flex items-center justify-between">
+    <div className="mt-20 flex items-center justify-center lg:justify-between">
       <img src={LogoKeepers} alt="logo keepers" />
 
-      <nav className="flex items-center">
+      <nav className="hidden items-center lg:flex">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

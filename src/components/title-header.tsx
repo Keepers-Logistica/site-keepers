@@ -13,10 +13,10 @@ export function TitleHeader({ title, className }: TitleHeaderProps) {
         className,
       )}
     >
-      <h1 className="font-title text-5xl font-semibold text-[#391805]">
+      <h1 className="font-title text-3xl font-semibold text-[#391805] lg:text-5xl">
         {title}
       </h1>
-      <figure className="mt-4 h-2 w-52 rounded-sm bg-primary" />
+      <figure className="mt-4 h-2 w-32 rounded-sm bg-primary lg:w-52" />
     </div>
   )
 }

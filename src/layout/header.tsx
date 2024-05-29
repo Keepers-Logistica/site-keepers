@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 export function Header() {
   return (
-    <header className="absolute top-0 z-50 flex h-9 w-full bg-black/30 px-20">
+    <header className="absolute top-0 z-50 hidden h-9 w-full bg-black/30 px-20 lg:flex">
       <div className="m-auto flex w-full max-w-[1440px] items-center justify-between">
         <div className="flex items-center gap-2 ">
           <Link

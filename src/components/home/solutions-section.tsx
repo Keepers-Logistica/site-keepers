@@ -26,7 +26,9 @@ import CarouselFoods from '@/assets/images/carousel/carousel-foods.png'
 import CarouselGraph from '@/assets/images/carousel/carousel-graph.png'
 import CarouselHospital from '@/assets/images/carousel/carousel-hospital.png'
 import CarouselSupriments from '@/assets/images/carousel/carousel-supriments.png'
+import { useResponsive } from '@/hooks/responisve'
 
+import { TitleHeader } from '../title-header'
 import { Button } from '../ui/button'
 import { CardCarousel } from './card-carousel'
 
@@ -46,6 +48,7 @@ export function SoluctionSection() {
   const swiperRef = useRef<SwiperRef>(null)
 
   const { ref, inView } = useInView()
+  const { Desktop } = useResponsive()
 
   const [buttons, setButtons] = useState<ButtonCarousel[]>([
     {
@@ -228,45 +231,43 @@ export function SoluctionSection() {
           KEEPERS
         </span>
         <div className="z-10 mb-16 flex flex-col items-center justify-center">
-          <h1 className="font-title text-5xl font-semibold text-[#391805]">
-            Serviços & Soluções
-          </h1>
-          <figure className="mt-4 h-2 w-52 rounded-sm bg-primary" />
+          <TitleHeader title="Serviços & Soluções" />
         </div>
-
-        <section className="m-auto max-w-[1100px] overflow-visible">
-          <Swiper
-            ref={swiperRef}
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              stopOnLastSlide: false,
-              waitForTransition: true,
-            }}
-            speed={1000}
-            centeredSlides={true}
-            onSlideChange={handleSlideChange}
-            className="z-10 mb-16 !overflow-visible"
-            spaceBetween={70}
-          >
-            {slides.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <CardCarousel
-                  img={slide.img}
-                  title={slide.title}
-                  description={slide.description}
-                  topics={slide.topics}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </section>
+        <Desktop>
+          <section className="m-auto max-w-[1100px] overflow-visible">
+            <Swiper
+              ref={swiperRef}
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+                stopOnLastSlide: false,
+                waitForTransition: true,
+              }}
+              speed={1000}
+              centeredSlides={true}
+              onSlideChange={handleSlideChange}
+              className="z-10 mb-16 !overflow-visible "
+              spaceBetween={70}
+            >
+              {slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <CardCarousel
+                    img={slide.img}
+                    title={slide.title}
+                    description={slide.description}
+                    topics={slide.topics}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </section>
+        </Desktop>
 
         <section
           ref={ref}
-          className="z-50 m-auto grid max-w-[1440px] grid-cols-4 gap-8 px-20"
+          className="z-50 m-auto grid max-w-[1440px] grid-cols-1 gap-8 px-20 lg:grid-cols-4"
         >
           {buttons.map((button) => (
             <motion.div

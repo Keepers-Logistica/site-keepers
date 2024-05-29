@@ -4,11 +4,13 @@ import { useInView } from 'react-intersection-observer'
 import { Element } from 'react-scroll'
 
 import pointsDecoratorImg from '@/assets/decorators/points.svg'
+import { useResponsive } from '@/hooks/responisve'
 
 import { Button } from '../ui/button'
 
 export function ContactMe() {
   const { ref, inView } = useInView()
+  const { Desktop } = useResponsive()
 
   return (
     <Element name="contact">
@@ -19,11 +21,11 @@ export function ContactMe() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <div className="z-10 flex flex-col items-center justify-center">
-          <h4 className="font-title text-5xl font-bold text-white">
+        <div className="z-10 mx-20 flex flex-col items-center justify-center">
+          <h4 className="font-title text-4xl font-bold text-white lg:text-5xl">
             Ficou interessado ?
           </h4>
-          <span className="font-title mt-8 text-4xl text-white">
+          <span className="font-title mt-8 text-center text-2xl text-white lg:text-4xl">
             Entre em contato conosco para{' '}
             <strong className="text-[#8F3C00]">EVOLUIR</strong> seu negócio
           </span>
@@ -33,21 +35,23 @@ export function ContactMe() {
             <WhatsappLogo className="h-7 w-7" />
           </Button>
         </div>
-        <motion.img
-          src={pointsDecoratorImg}
-          className="absolute bottom-6 left-6"
-          alt="pontos cinza"
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        />
+        <Desktop>
+          <motion.img
+            src={pointsDecoratorImg}
+            className="absolute bottom-6 left-6"
+            alt="pontos cinza"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          />
+        </Desktop>
         <motion.div
-          className="absolute right-6 z-0 text-[700px] text-white opacity-5"
+          className="absolute right-6 z-0 text-[450px] text-white opacity-5 lg:text-[700px]"
           initial={{ opacity: 0, x: 50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Truck className=" opacity-10" />
+          <Truck className="opacity-10" />
         </motion.div>
       </motion.div>
     </Element>

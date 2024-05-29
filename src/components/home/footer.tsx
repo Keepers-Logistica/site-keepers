@@ -12,9 +12,9 @@ import { Separator } from '../ui/separator'
 
 export function Footer() {
   return (
-    <footer className="bg-[#2C2C2C] px-20 pt-16">
-      <section className="m-auto  grid max-w-[1440px] grid-cols-12 pb-52">
-        <div className="col-span-5 flex flex-col">
+    <footer className="bg-[#2C2C2C]  pt-16">
+      <section className="m-auto grid max-w-[1440px] grid-cols-12 space-y-10 px-20 pb-52">
+        <div className="col-span-12 flex flex-col lg:col-span-5">
           <img
             src={LogoKeepersImg}
             className="w-[300px]"
@@ -54,8 +54,8 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-1"></div>
-        <div className="col-span-3">
+        <div className="col-span-12 lg:col-span-1"></div>
+        <div className="col-span-12 lg:col-span-3">
           <div>
             <h4 className="font-title text-3xl font-semibold text-white">
               Serviços
@@ -68,7 +68,7 @@ export function Footer() {
           <p className="mt-7 text-[#A9A9A9]">Manuseio</p>
           <p className="mt-7 text-[#A9A9A9]">Separação</p>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-12 lg:col-span-3">
           <div>
             <h4 className="font-title text-3xl font-semibold text-white">
               Endereço

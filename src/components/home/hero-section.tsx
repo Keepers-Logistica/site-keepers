@@ -11,11 +11,11 @@ export function HeroSection() {
     <div className="min-h-[100vh] bg-zinc-900">
       <figure className="bg-hero absolute" />
       <figure className="bg-decorator-home absolute">
-        <div className="m-auto mt-9 h-[70%] max-w-[1440px] px-2">
+        <div className="m-auto h-[70%] max-w-[1440px] px-20">
           <Navigation />
           <section className="m-auto flex h-full flex-col items-center justify-center">
             <div className="flex items-end justify-center">
-              <div className="font-title text-center text-6xl font-semibold text-white">
+              <div className="font-title text-center text-3xl font-semibold text-white lg:text-6xl">
                 <h1 className="mb-4">
                   Keepers sempre <br />
                 </h1>
