@@ -15,6 +15,7 @@ import {
 import { motion } from 'framer-motion'
 import { ReactNode, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { useMediaQuery } from 'react-responsive'
 import { Element } from 'react-scroll'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -26,7 +27,6 @@ import CarouselFoods from '@/assets/images/carousel/carousel-foods.png'
 import CarouselGraph from '@/assets/images/carousel/carousel-graph.png'
 import CarouselHospital from '@/assets/images/carousel/carousel-hospital.png'
 import CarouselSupriments from '@/assets/images/carousel/carousel-supriments.png'
-import { useResponsive } from '@/hooks/responisve'
 
 import { TitleHeader } from '../title-header'
 import { Button } from '../ui/button'
@@ -48,7 +48,7 @@ export function SoluctionSection() {
   const swiperRef = useRef<SwiperRef>(null)
 
   const { ref, inView } = useInView()
-  const { Desktop } = useResponsive()
+  const isDesktop = useMediaQuery({ minWidth: 992 })
 
   const [buttons, setButtons] = useState<ButtonCarousel[]>([
     {
@@ -233,7 +233,7 @@ export function SoluctionSection() {
         <div className="z-10 mb-16 flex flex-col items-center justify-center">
           <TitleHeader title="Serviços & Soluções" />
         </div>
-        <Desktop>
+        {isDesktop && (
           <section className="m-auto max-w-[1100px] overflow-visible">
             <Swiper
               ref={swiperRef}
@@ -263,7 +263,7 @@ export function SoluctionSection() {
               ))}
             </Swiper>
           </section>
-        </Desktop>
+        )}
 
         <section
           ref={ref}
