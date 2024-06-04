@@ -1,11 +1,13 @@
 import { Devices } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 
 import systemImg from '@/assets/images/system.svg'
 
 export function SystemSection() {
   const { ref, inView } = useInView()
+  const { t } = useTranslation()
 
   return (
     <section
@@ -36,19 +38,16 @@ export function SystemSection() {
         <motion.div className="flex items-center gap-4">
           <Devices className="h-10 w-10 text-[#FDCAAE]" />
           <h4 className="font-title text-4xl font-semibold text-[#FF6C1B]">
-            Sistema próprio
+            {t('systemSection.title')}
           </h4>
         </motion.div>
         <motion.p
-          className=" mt-4 text-lg leading-8 text-zinc-800 lg:w-[500px]"
+          className="mt-4 text-lg leading-8 text-zinc-800 lg:w-[500px]"
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Um sistema próprio de integração de pedidos oferece personalização
-          total, maior eficiência, e controle completo dos dados, garantindo
-          segurança e confiabilidade. Com suporte técnico especializado, você
-          obtém soluções feitas sob medida para o sucesso do seu negócio.
+          {t('systemSection.description')}
         </motion.p>
       </motion.div>
     </section>

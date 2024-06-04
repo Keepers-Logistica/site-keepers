@@ -1,11 +1,13 @@
 import { ChatTeardropText } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 
 import suportImg from '@/assets/images/suport.svg'
 
 export function SuportSection() {
   const { ref, inView } = useInView()
+  const { t } = useTranslation()
 
   return (
     <motion.section
@@ -23,7 +25,7 @@ export function SuportSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Suporte
+            {t('suportSection.title')}
           </motion.h4>
           <ChatTeardropText className="h-10 w-10 text-[#FDCAAE]" />
         </div>
@@ -33,9 +35,10 @@ export function SuportSection() {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Disponível pelos canais de atendimento <br /> (Email, Telefone, Chat),
-          Ficou com alguma dúvida? Basta entrar em contato com nossa{' '}
-          <span className="text-[#FF9C66]">equipe de atendimento</span>
+          {t('suportSection.description')}
+          <span className="text-[#FF9C66]">
+            {t('suportSection.supportTeam')}
+          </span>
         </motion.p>
       </div>
       <div className="">

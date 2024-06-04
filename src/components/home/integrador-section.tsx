@@ -1,5 +1,6 @@
 import { Desktop as DesktopIcon, PlayCircle } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 import ReactPlayer from 'react-player/lazy'
 import { useMediaQuery } from 'react-responsive'
@@ -16,10 +17,9 @@ import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog'
 
 export function IntegradorSection() {
   const { ref, inView } = useInView()
-
   const { Desktop, Mobile } = useResponsive()
-
   const isMobile = useMediaQuery({ maxWidth: 767 })
+  const { t } = useTranslation()
 
   return (
     <Element name="integrador">
@@ -27,7 +27,11 @@ export function IntegradorSection() {
         ref={ref}
         className="m-auto mb-14 max-w-[1440px] overflow-visible lg:mb-52"
       >
-        <TitleHeader title="Um Sistema 100% Online" className="mb-20" />
+        <TitleHeader
+          title={t('integradorSection.title')}
+          className="mb-20"
+          inView={inView}
+        />
         <div className="mx-10 grid grid-cols-12 lg:mx-20">
           <motion.div
             className="col-span-12 lg:col-span-6"
@@ -52,7 +56,7 @@ export function IntegradorSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Sistema de integração
+              {t('integradorSection.system_description')}
             </motion.h4>
 
             <motion.p
@@ -61,21 +65,14 @@ export function IntegradorSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Nosso sistema de integração de pedidos e notas fiscais otimiza
-              suas operações logísticas com eficiência e precisão.
-              <br /> <br />
-              Acompanhe pedidos em <strong>tempo real</strong>, emita notas
-              fiscais, gere relatórios detalhados, crie novos pedidos, visualize
-              o estoque atualizado e importe e acompanhe todas as notas fiscais.
-              Tudo isso em uma plataforma integrada com interface intuitiva.
-              Além disso, você pode falar diretamente com nossos atendentes pelo
-              chat para obter suporte imediato.
+              {t('integradorSection.detailed_description')}
             </motion.p>
             <div className="flex flex-col lg:flex-row">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button className="font-title mt-11 w-fit bg-[#FF5D04] px-14 py-5 font-semibold">
-                    Ver vídeo <PlayCircle className="ml-2 h-5 w-5" />
+                    {t('integradorSection.watch_video')}{' '}
+                    <PlayCircle className="ml-2 h-5 w-5" />
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="m-0 flex w-fit items-center justify-center border-none bg-transparent p-0">
@@ -98,7 +95,8 @@ export function IntegradorSection() {
                   variant="outline"
                   className="font-title mt-4 border-[#FF5D04] px-14 py-5 font-semibold text-[#FF5D04] hover:text-orange-400 lg:ml-3 lg:mt-11"
                 >
-                  Acessar <DesktopIcon className="ml-4 h-5 w-5 lg:ml-2" />
+                  {t('integradorSection.access')}{' '}
+                  <DesktopIcon className="ml-4 h-5 w-5 lg:ml-2" />
                 </Button>
               </Link>
             </div>

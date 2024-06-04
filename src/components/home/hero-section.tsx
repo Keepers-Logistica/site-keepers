@@ -1,14 +1,17 @@
 import { CaretDown } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-scroll'
+import { useTranslation } from 'react-i18next'
+import { Element, Link } from 'react-scroll'
 import { Typewriter } from 'react-simple-typewriter'
 
 import { Button } from '../ui/button'
 import { Navigation } from './navigation'
 
 export function HeroSection() {
+  const { t } = useTranslation()
+
   return (
-    <div className="min-h-[100vh] bg-zinc-900">
+    <Element name="home" className="min-h-[100vh] bg-zinc-900">
       <figure className="bg-hero absolute" />
       <figure className="bg-decorator-home absolute">
         <div className="m-auto h-[70%] max-w-[1440px] px-10 lg:px-20">
@@ -17,16 +20,11 @@ export function HeroSection() {
             <div className="flex w-full items-end justify-center ">
               <div className="font-title text-center text-3xl font-semibold text-white lg:text-6xl">
                 <h1 className="mb-4">
-                  Keepers sempre <br />
+                  {t('heroSection.heading')} <br />
                 </h1>
                 <span className="text-[#FFC9AB]">
                   <Typewriter
-                    words={[
-                      'Evoluindo negócios!',
-                      'Otimizando processos!',
-                      'Enviando pedidos!',
-                      'Integrando pedidos!',
-                    ]}
+                    words={t('heroSection.typewriter', { returnObjects: true })}
                     loop={5}
                     cursor
                     cursorStyle="_"
@@ -41,7 +39,7 @@ export function HeroSection() {
             <motion.div whileTap={{ scale: 0.85 }}>
               <Link to="solutions" spy={true} smooth={true} duration={500}>
                 <Button className="font-title mt-11 px-8 py-7 text-lg font-semibold">
-                  Nossos serviços
+                  {t('heroSection.button')}
                 </Button>
               </Link>
             </motion.div>
@@ -51,6 +49,6 @@ export function HeroSection() {
           <CaretDown className="mb-5 h-8 w-8 text-zinc-400/55" />
         </div>
       </figure>
-    </div>
+    </Element>
   )
 }

@@ -1,6 +1,7 @@
 import { PlayCircle } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer' // Importe o hook
+import { useTranslation } from 'react-i18next'
+import { useInView } from 'react-intersection-observer'
 import ReactPlayer from 'react-player/lazy'
 import { Link } from 'react-router-dom'
 import { Element } from 'react-scroll'
@@ -13,7 +14,7 @@ import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog'
 
 export function AboutMeSection() {
   const { ref, inView } = useInView()
-
+  const { t } = useTranslation()
   const { Desktop, Mobile } = useResponsive()
 
   return (
@@ -48,7 +49,7 @@ export function AboutMeSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Conheça nos
+              {t('aboutMeSection.title')}
             </motion.h1>
           </div>
           <motion.h4
@@ -57,7 +58,7 @@ export function AboutMeSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Um pouco da nossa história
+            {t('aboutMeSection.subtitle')}
           </motion.h4>
 
           <motion.p
@@ -65,24 +66,15 @@ export function AboutMeSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            Fundada em 1996, a Keepers consolidou-se como um dos principais
-            operadores logísticos do país. Ao longo dos anos, a Keepers
-            Logística desenvolveu um vasto know-how em logística de pedidos
-            altamente fracionados, destacando-se pelo uso de tecnologias de
-            ponta no gerenciamento de armazéns e no desenvolvimento de
-            operações. <br />
-            <br /> Nossa capacidade de compreender, planejar e executar é
-            evidenciada pela nossa abordagem personalizada, que respeita as
-            diversas necessidades de cada cliente. Na Keepers, estamos
-            comprometidos em oferecer um nível de serviço excepcional, superando
-            os padrões nacionais e garantindo a satisfação de nossos clientes em
-            todas as etapas da cadeia logística.
-          </motion.p>
+            dangerouslySetInnerHTML={{
+              __html: t('aboutMeSection.description'),
+            }}
+          />
           <Mobile>
             <Link to="https://www.youtube.com/watch?v=Rdd6FLXW0bU">
               <Button className="font-title mt-11 bg-[#FF5D04] px-14 py-5 font-semibold">
-                Ver vídeo <PlayCircle className="ml-2 h-5 w-5" />
+                {t('aboutMeSection.button')}{' '}
+                <PlayCircle className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </Mobile>
@@ -90,7 +82,8 @@ export function AboutMeSection() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="font-title mt-11 bg-[#FF5D04] px-14 py-5 font-semibold">
-                  Ver vídeo <PlayCircle className="ml-2 h-5 w-5" />
+                  {t('aboutMeSection.button')}{' '}
+                  <PlayCircle className="ml-2 h-5 w-5" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="m-0 flex w-fit items-center justify-center border-none bg-transparent p-0">

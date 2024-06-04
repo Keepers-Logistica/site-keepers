@@ -1,5 +1,6 @@
 import { Truck } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 
 import linesDecorator from '@/assets/decorators/lines.svg'
@@ -19,13 +20,13 @@ export function RoadSection() {
   const { ref: refOne, inView: inViewOne } = useInView()
   const { ref: refTwo, inView: inViewTwo } = useInView()
   const { ref: refThree, inView: inViewThree } = useInView()
-
   const { Desktop, Mobile } = useResponsive()
+  const { t } = useTranslation()
 
   return (
     <div className="m-auto max-w-[1440px]">
       <div className="mx-10 lg:mx-20">
-        <TitleHeader title="Nossos Diferenciais" />
+        <TitleHeader title={t('roadSection.title')} inView={inViewOne} />
         <div
           ref={refOne}
           className="relative flex grid-cols-12 items-center justify-center"
@@ -173,7 +174,7 @@ export function RoadSection() {
               alt="emai"
               className="absolute bottom-0 "
               initial={{ opacity: 0 }}
-              animate={inViewTwo ? { opacity: 1 } : {}}
+              animate={inViewThree ? { opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             />
           </Desktop>

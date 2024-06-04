@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link as RouterLink } from 'react-router-dom'
 import { Link } from 'react-scroll'
 
@@ -20,48 +21,6 @@ interface ListItemProps {
   title: string
 }
 
-const solutions: { title: string; description: string }[] = [
-  {
-    title: 'Recebimento',
-    description:
-      'Toda atividade de recebimento é realizado com agilidade e excelência.',
-  },
-  {
-    title: 'Conferência',
-    description:
-      'Um controle rígido através de conferências ao longo da movimentação do material.',
-  },
-  {
-    title: 'Armazenagem',
-    description:
-      'Armazenagem com eficiência e tecnologia de ponta garantindo a qualidade operacional.',
-  },
-  {
-    title: 'Manuseio',
-    description:
-      'Estamos preparados para diferentes demandas sazonais, podendo desenvolver linhas de montagem específicas de acordo com as necessidades de cada cliente.',
-  },
-  {
-    title: 'Separação',
-    description:
-      'Separação e preparação de pedidos (picking) de modo diferenciado.',
-  },
-  {
-    title: 'Expedição',
-    description:
-      'Expedição com comprometimento, seu produto no local e momento exato.',
-  },
-  {
-    title: 'Distribuição',
-    description: 'Temos um grande know-how na distribuição de pedidos.',
-  },
-  {
-    title: 'Gestão',
-    description:
-      'Com uma moderna ferramenta que permite realizar um controle amplo',
-  },
-]
-
 export function ListItem({ children, title }: ListItemProps) {
   return (
     <li>
@@ -82,6 +41,43 @@ export function ListItem({ children, title }: ListItemProps) {
 }
 
 export function Navigation() {
+  const { t } = useTranslation()
+
+  const solutions: { title: string; description: string }[] = [
+    {
+      title: t('solutions.receiving.title'),
+      description: t('solutions.receiving.description'),
+    },
+    {
+      title: t('solutions.inspection.title'),
+      description: t('solutions.inspection.description'),
+    },
+    {
+      title: t('solutions.storage.title'),
+      description: t('solutions.storage.description'),
+    },
+    {
+      title: t('solutions.handling.title'),
+      description: t('solutions.handling.description'),
+    },
+    {
+      title: t('solutions.picking.title'),
+      description: t('solutions.picking.description'),
+    },
+    {
+      title: t('solutions.shipping.title'),
+      description: t('solutions.shipping.description'),
+    },
+    {
+      title: t('solutions.distribution.title'),
+      description: t('solutions.distribution.description'),
+    },
+    {
+      title: t('solutions.management.title'),
+      description: t('solutions.management.description'),
+    },
+  ]
+
   return (
     <div className="mt-20 flex items-center justify-center lg:justify-between">
       <img src={LogoKeepers} alt="logo keepers" />
@@ -92,7 +88,7 @@ export function Navigation() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white">
                 <Link to="solutions" spy={true} smooth={true} duration={500}>
-                  Soluções
+                  {t('navigation.solutions')}
                 </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -110,7 +106,7 @@ export function Navigation() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white">
                 <Link to="integrador" spy={true} smooth={true} duration={500}>
-                  Nosso sistema
+                  {t('navigation.ourSystem')}
                 </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -122,22 +118,24 @@ export function Navigation() {
                         href="/"
                       >
                         <div className="font-title text-md mb-2 mt-4 font-semibold text-white">
-                          Integrador
+                          {t('ourSystem.title')}
                         </div>
                         <p className="text-sm leading-tight text-zinc-400">
-                          Nosso sistema de integração de pedidos em tempo real
+                          {t('ourSystem.description')}
                         </p>
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem title="Interface intuitiva">
-                    Interface amigavel rápida e facil de utilizar.
+                  <ListItem
+                    title={t('ourSystem.features.intuitiveInterface.title')}
+                  >
+                    {t('ourSystem.features.intuitiveInterface.description')}
                   </ListItem>
-                  <ListItem title="Monitoramento">
-                    Monitore e acompanhe todos seus pedidos.
+                  <ListItem title={t('ourSystem.features.monitoring.title')}>
+                    {t('ourSystem.features.monitoring.description')}
                   </ListItem>
-                  <ListItem title="Atualizações">
-                    Atualizações semanais com novas ferramentas.
+                  <ListItem title={t('ourSystem.features.updates.title')}>
+                    {t('ourSystem.features.updates.description')}
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
@@ -145,21 +143,21 @@ export function Navigation() {
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
                 <Link to="segments" spy={true} smooth={true} duration={500}>
-                  Segmentos
+                  {t('navigation.segments')}
                 </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
                 <Link to="contact" spy={true} smooth={true} duration={500}>
-                  Contato
+                  {t('navigation.contact')}
                 </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger noChevron className="text-white">
                 <Link to="about-me" spy={true} smooth={true} duration={500}>
-                  Conheça nos
+                  {t('navigation.aboutUs')}
                 </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent></NavigationMenuContent>
@@ -169,7 +167,7 @@ export function Navigation() {
 
         <Button className="font-title ml-2 h-7 rounded-full bg-primary px-5 text-xs font-bold text-[#391805]">
           <RouterLink to="https://integrador.keepers.com.br" target="_blank">
-            ACESSAR SISTEMA
+            {t('navigation.accessSystem')}
           </RouterLink>
         </Button>
       </nav>

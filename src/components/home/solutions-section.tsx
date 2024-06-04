@@ -14,7 +14,8 @@ import {
   UsersThree,
 } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
-import { ReactNode, useRef, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'react-responsive'
 import { Element } from 'react-scroll'
@@ -35,12 +36,14 @@ import { Drawer, DrawerContent, DrawerTrigger } from '../ui/drawer'
 import { Separator } from '../ui/separator'
 import { CardCarousel } from './card-carousel'
 
+type $SpecialObject = object | Array<string | object>
+
 interface ButtonCarousel {
   id: number
   icon: ReactNode
   label: string
   description: string
-  topics: string[]
+  topics: string[] | $SpecialObject | any
   img: string
   active: boolean
 }
@@ -52,128 +55,94 @@ interface SwiperRef {
 
 export function SoluctionSection() {
   const swiperRef = useRef<SwiperRef>(null)
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation()
 
-  const { ref, inView } = useInView()
+  const { ref: buttonsRef, inView: inViewButtons } = useInView()
+  const { ref: titleRef, inView: inViewTitle } = useInView()
   const isDesktop = useMediaQuery({ minWidth: 992 })
 
-  const [buttonsSlide, setButtonsSlide] = useState<ButtonCarousel[]>([
+  const slides = [
     {
       id: 1,
       icon: <Car className="mr-4 h-10 w-10" />,
-      label: 'Recebimento',
-      description:
-        'Preparação de pedidos (picking) de modo diferenciado, reduzindo substancialmente o tempo de ciclo do pedido, contando com um sistema apurado para localização de produtos e métodos de transmissão dos pedidos via EDI, em controles do nível de estoque, garantindo processos mais eficientes, maior na agilidade nas entregas.',
-      topics: [
-        'Atendimento de solicitações e ocorrências',
-        'Processamento de pedidos',
-        'Coleta de itens solicitados',
-        'Controle de nível de estoque Informações',
-      ],
+      label: t('solutionSection.buttons.0.label'),
+      description: t('solutionSection.buttons.0.description'),
+      topics: t('solutionSection.buttons.0.topics', { returnObjects: true }),
       img: CarouselAutoParts,
       active: true,
     },
     {
       id: 2,
       icon: <Clipboard className="mr-4 h-10 w-10" />,
-      label: 'Conferência',
-      description:
-        'A Keepers Logística realiza um controle rígido através de conferências ao longo da movimentação do material, oferecendo a seus clientes um nível de acuracidade de estoque altíssimo.',
-      topics: [
-        'Conferência de volumes declarados na nota fiscal',
-        'Conferência quantitativa e qualitativa dos materiais recebidos',
-        'Regularização da mercadoria recebida',
-      ],
+      label: t('solutionSection.buttons.1.label'),
+      description: t('solutionSection.buttons.1.description'),
+      topics: t('solutionSection.buttons.1.topics', { returnObjects: true }),
       img: CarouselEcommerce,
       active: false,
     },
     {
       id: 3,
       icon: <CheckSquare className="mr-4 h-10 w-10" />,
-      label: 'Armazenagem',
-      description:
-        'armazenagem com eficiência e tecnologia de ponta garantindo a qualidade operacional, além de contar com uma área para armazenagem com acesso restrito, câmeras de monitoramento e alarme para produtos de alto valor agregado e considerados atrativos.',
-      topics: [
-        'Cadastro de itens',
-        'Endereçamento e armazenagem',
-        'Inventário diário de itens movimentados',
-        'Endereçamento de volumes',
-      ],
+      label: t('solutionSection.buttons.2.label'),
+      description: t('solutionSection.buttons.2.description'),
+      topics: t('solutionSection.buttons.2.topics', { returnObjects: true }),
       img: CarouselGraph,
       active: false,
     },
     {
       id: 4,
       icon: <UsersThree className="mr-4 h-10 w-10" />,
-      label: 'Manuseio',
-      description:
-        'Estamos preparados para diferentes demandas sazonais, podendo desenvolver linhas de montagem específicas de acordo com as necessidades de cada cliente sempre obedecendo aos mais rigorosos critérios de qualidade, integrando logística com atividades complementares',
-      topics: ['Montagem de kits', 'Seleção', 'Desmontagem', 'Etiquetagem'],
+      label: t('solutionSection.buttons.3.label'),
+      description: t('solutionSection.buttons.3.description'),
+      topics: t('solutionSection.buttons.3.topics', { returnObjects: true }),
       img: CarouselCosmetics,
       active: false,
     },
     {
       id: 5,
       icon: <BoxArrowDown className="mr-4 h-10 w-10" />,
-      label: 'Separação',
-      description:
-        'Separação e preparação de pedidos (picking) de modo diferenciado, reduzindo substancialmente o tempo de ciclo do pedido, contando com um sistema apurado para localização de produtos e métodos de transmissão dos pedidos via EDI, em controles do nível de estoque, garantindo processos mais eficientes, maior na agilidade nas entregas.',
-      topics: [
-        'Atendimento de solicitações e ocorrências',
-        'Processamento de pedidos',
-        'Coleta de itens solicitados',
-        'Conferência de pedidos',
-      ],
+      label: t('solutionSection.buttons.4.label'),
+      description: t('solutionSection.buttons.4.description'),
+      topics: t('solutionSection.buttons.4.topics', { returnObjects: true }),
       img: CarouselFoods,
       active: false,
     },
     {
       id: 6,
       icon: <CirclesThreePlus className="mr-4 h-10 w-10" />,
-      label: 'Expedição',
-      description:
-        'A Keepers Logística realiza expedição com comprometimento, seu produto no local e momento exato.',
-      topics: [
-        'Agregar, pesar, embalar, ordenar e verificar o pedido',
-        'Impressão de documentos fiscais',
-        'Identificação, carregamento e despacho do veículo',
-        'Gereciamento do transporte',
-      ],
+      label: t('solutionSection.buttons.5.label'),
+      description: t('solutionSection.buttons.5.description'),
+      topics: t('solutionSection.buttons.5.topics', { returnObjects: true }),
       img: CarouselGraph,
       active: false,
     },
     {
       id: 7,
       icon: <Truck className="mr-4 h-10 w-10" />,
-      label: 'Distribuição',
-      description:
-        'A Keepers Logística adquiriu através dos anos um grande know-how na distribuição de pedidos de modo geral, sobretudo, pedidos com grande volume de fracionamento para atendimento, utilizando as ferramentas mais modernas em termos de tecnologia Keepers Logística garante a melhor experiência, proporcionando uma distribuição altamente eficiente',
-      topics: [
-        'Distribuição fracionada',
-        'Logística reversa (devolução de pedido)',
-        'Distribuição intensiva',
-      ],
+      label: t('solutionSection.buttons.6.label'),
+      description: t('solutionSection.buttons.6.description'),
+      topics: t('solutionSection.buttons.6.topics', { returnObjects: true }),
       img: CarouselHospital,
       active: false,
     },
     {
       id: 8,
       icon: <Graph className="mr-4 h-10 w-10" />,
-      label: 'Gestão',
-      description:
-        'A Keepers Logística conta com uma moderna ferramenta que permite realizar um controle amplo, ágil e eficaz na gestão dos estoques, gerenciando a movimentação em todos os seus pontos e a produtividade em cada etapa, incluindo todo o fluxo fiscal.',
-      topics: [
-        'Login e senha individuais para cada nível de usuário',
-        'Gerenciamento da armazenagem e controle FIFO e LIFO',
-        'Controle desde à portaria até a entrega',
-        'Controle por lotes de fabricação',
-      ],
+      label: t('solutionSection.buttons.7.label'),
+      description: t('solutionSection.buttons.7.description'),
+      topics: t('solutionSection.buttons.7.topics', { returnObjects: true }),
       img: CarouselSupriments,
       active: false,
     },
-  ])
+  ]
+
+  const [buttonsSlide, setButtonsSlide] = useState<ButtonCarousel[]>(slides)
   const [currentSlide, setCurrentSlide] = useState<ButtonCarousel>(
     buttonsSlide[0],
-  )
+  ) as any
 
   function handleSetItem(id: number) {
     setButtonsSlide((prevButtons) =>
@@ -208,6 +177,11 @@ export function SoluctionSection() {
       setCurrentSlide(activeButton)
     }
   }
+
+  useEffect(() => {
+    setButtonsSlide(slides)
+  }, [language])
+
   return (
     <Element name="solutions">
       <div className="relative mb-16">
@@ -216,8 +190,14 @@ export function SoluctionSection() {
             KEEPERS
           </span>
         )}
-        <div className="z-10 mb-16 flex flex-col items-center justify-center">
-          <TitleHeader title="Serviços & Soluções" />
+        <div
+          ref={titleRef}
+          className="z-10 mb-16 flex flex-col items-center justify-center"
+        >
+          <TitleHeader
+            title={t('solutionSection.title')}
+            inView={inViewTitle}
+          />
         </div>
         {isDesktop && (
           <section className="m-auto max-w-[1100px] overflow-visible">
@@ -253,13 +233,16 @@ export function SoluctionSection() {
 
         {isDesktop ? (
           <section
-            ref={ref}
+            ref={buttonsRef}
             className="z-50 m-auto grid max-w-[1440px] grid-cols-1 gap-8 px-20 lg:grid-cols-4"
           >
             {buttonsSlide.map((button) => (
               <motion.div
                 key={button.id}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+                animate={{
+                  opacity: inViewButtons ? 1 : 0,
+                  y: inViewButtons ? 0 : 100,
+                }}
                 transition={{ duration: 0.5 }}
               >
                 <Button
@@ -275,7 +258,7 @@ export function SoluctionSection() {
           </section>
         ) : (
           <section
-            ref={ref}
+            ref={buttonsRef}
             className="z-50 m-auto grid max-w-[1440px] grid-cols-1 gap-8 px-10 lg:grid-cols-4"
           >
             {buttonsSlide.map((button, index) => (
@@ -283,7 +266,10 @@ export function SoluctionSection() {
                 <DrawerTrigger>
                   <motion.div
                     key={button.id}
-                    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+                    animate={{
+                      opacity: inViewButtons ? 1 : 0,
+                      y: inViewButtons ? 0 : 100,
+                    }}
                     transition={{ duration: 0.5 }}
                   >
                     <Button
@@ -319,7 +305,7 @@ export function SoluctionSection() {
                   </div>
                   <Separator />
                   <div className="ml-8 mt-4 w-full">
-                    {currentSlide.topics.map((topic, index) => (
+                    {currentSlide.topics.map((topic: any, index: any) => (
                       <div key={index} className="my-2 flex items-center gap-4">
                         <CheckCircle className="h-6 w-6 text-emerald-400" />
                         <span className="text-start">{topic}</span>

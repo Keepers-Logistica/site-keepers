@@ -1,0 +1,219 @@
+{
+  "navigation": {
+    "solutions": "Solutions",
+    "ourSystem": "Our System",
+    "segments": "Segments",
+    "contact": "Contact",
+    "aboutUs": "About Us",
+    "accessSystem": "ACCESS SYSTEM"
+  },
+  "solutions": {
+    "receiving": {
+      "title": "Receiving",
+      "description": "All receiving activities are carried out with agility and excellence."
+    },
+    "inspection": {
+      "title": "Inspection",
+      "description": "Strict control through inspections throughout the material handling."
+    },
+    "storage": {
+      "title": "Storage",
+      "description": "Storage with efficiency and cutting-edge technology ensuring operational quality."
+    },
+    "handling": {
+      "title": "Handling",
+      "description": "We are prepared for different seasonal demands, being able to develop specific assembly lines according to each client's needs."
+    },
+    "picking": {
+      "title": "Picking",
+      "description": "Order picking and preparation (picking) in a differentiated way."
+    },
+    "shipping": {
+      "title": "Shipping",
+      "description": "Shipping with commitment, your product at the right place and time."
+    },
+    "distribution": {
+      "title": "Distribution",
+      "description": "We have extensive know-how in order distribution."
+    },
+    "management": {
+      "title": "Management",
+      "description": "With a modern tool that allows comprehensive control."
+    }
+  },
+  "ourSystem": {
+    "title": "Integrador",
+    "description": "Our real-time order integration system",
+    "features": {
+      "intuitiveInterface": {
+        "title": "Intuitive Interface",
+        "description": "User-friendly, fast, and easy to use."
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Monitor and track all your orders."
+      },
+      "updates": {
+        "title": "Updates",
+        "description": "Weekly updates with new tools."
+      }
+    }
+  },
+  "heroSection": {
+    "heading": "Keepers always",
+    "typewriter": [
+      "Evolving businesses!",
+      "Optimizing processes!",
+      "Shipping orders!",
+      "Integrating orders!"
+    ],
+    "button": "Our services"
+  },
+  "aboutMeSection": {
+    "title": "About Us",
+    "subtitle": "A little about our history",
+    "description": "Founded in 1996, Keepers has established itself as one of the leading logistics operators in the country. Over the years, Keepers Logistics has developed extensive know-how in highly fractional order logistics, standing out for the use of cutting-edge technologies in warehouse management and operations development. <br /><br /> Our ability to understand, plan, and execute is evidenced by our personalized approach, respecting the diverse needs of each client. At Keepers, we are committed to providing an exceptional level of service, exceeding national standards and ensuring customer satisfaction at all stages of the logistics chain.",
+    "button": "Watch video"
+  },
+  "solutionSection": {
+    "title": "Services & Solutions",
+    "buttons": [
+      {
+        "label": "Receiving",
+        "description": "Order picking and preparation (picking) in a differentiated way, substantially reducing the order cycle time, with an accurate system for locating products and methods for transmitting orders via EDI, inventory level controls, ensuring more efficient processes, greater agility in deliveries.",
+        "topics": [
+          "Handling requests and occurrences",
+          "Order processing",
+          "Item collection",
+          "Inventory level control"
+        ]
+      },
+      {
+        "label": "Inspection",
+        "description": "Keepers Logistics performs strict control through inspections throughout the material handling, offering its clients a very high inventory accuracy level.",
+        "topics": [
+          "Checking volumes declared on the invoice",
+          "Quantitative and qualitative inspection of received materials",
+          "Regularization of received goods"
+        ]
+      },
+      {
+        "label": "Storage",
+        "description": "Storage with efficiency and cutting-edge technology ensuring operational quality, in addition to having a storage area with restricted access, monitoring cameras, and an alarm for high-value and attractive products.",
+        "topics": [
+          "Item registration",
+          "Addressing and storage",
+          "Daily inventory of moved items",
+          "Volume addressing"
+        ]
+      },
+      {
+        "label": "Handling",
+        "description": "We are prepared for different seasonal demands, being able to develop specific assembly lines according to each client's needs, always complying with the strictest quality criteria, integrating logistics with complementary activities.",
+        "topics": [
+          "Kit assembly",
+          "Selection",
+          "Disassembly",
+          "Labeling"
+        ]
+      },
+      {
+        "label": "Picking",
+        "description": "Order picking and preparation (picking) in a differentiated way, substantially reducing the order cycle time, with an accurate system for locating products and methods for transmitting orders via EDI, inventory level controls, ensuring more efficient processes, greater agility in deliveries.",
+        "topics": [
+          "Handling requests and occurrences",
+          "Order processing",
+          "Item collection",
+          "Order inspection"
+        ]
+      },
+      {
+        "label": "Shipping",
+        "description": "Keepers Logistics performs shipping with commitment, ensuring your product is in the right place at the right time.",
+        "topics": [
+          "Aggregate, weigh, pack, order, and check the order",
+          "Printing of tax documents",
+          "Identification, loading, and dispatch of the vehicle",
+          "Transport management"
+        ]
+      },
+      {
+        "label": "Distribution",
+        "description": "Keepers Logistics has acquired over the years extensive know-how in order distribution in general, especially for highly fractional orders, using the most modern tools in terms of technology Keepers Logistics guarantees the best experience, providing highly efficient distribution.",
+        "topics": [
+          "Fractional distribution",
+          "Reverse logistics (order return)",
+          "Intensive distribution"
+        ]
+      },
+      {
+        "label": "Management",
+        "description": "Keepers Logistics has a modern tool that allows comprehensive, agile, and efficient stock management, managing movements at all points and productivity at each stage, including the entire fiscal flow.",
+        "topics": [
+          "Individual login and password for each user level",
+          "Storage management and FIFO and LIFO control",
+          "Control from the gatehouse to delivery",
+          "Batch manufacturing control"
+        ]
+      }
+    ]
+  },
+  "numbersSection": {
+    "since": "since",
+    "moreThan": "more than",
+    "realizing": "realizing",
+    "operations": "operations",
+    "products": "products",
+    "stored": "stored",
+    "goods": "goods",
+    "busy": "busy"
+  },
+  "segmentsSection": {
+    "title": "Segments"
+  },
+  "integradorSection": {
+    "title": "A 100% Online System",
+    "integrador": "Integrator",
+    "system_description": "Integration system",
+    "detailed_description": "Our order and invoice integration system optimizes your logistics operations with efficiency and precision. Track orders in real time, issue invoices, generate detailed reports, create new orders, view updated inventory, and import and track all invoices. All in an integrated platform with an intuitive interface. Additionally, you can chat directly with our support staff for immediate assistance.",
+    "watch_video": "Watch video",
+    "access": "Access"
+  },
+  "roadSection": {
+    "title": "Our Differentials"
+  },
+  "systemSection": {
+    "title": "Proprietary system",
+    "description": "A proprietary order integration system offers total customization, greater efficiency, and complete data control, ensuring security and reliability. With specialized technical support, you get tailor-made solutions for the success of your business."
+  },
+  "suportSection": {
+    "title": "Support",
+    "description": "Available through support channels (Email, Phone, Chat). Have any questions? Just contact our",
+    "supportTeam": " Support team"
+  },
+  "contactMeSection": {
+    "interested": "Interested?",
+    "contactUs": "Get in touch with us to",
+    "evolve": "EVOLVE",
+    "contactButton": "Contact us",
+    "decoratorAlt": "gray dots"
+  },
+  "footerSection": {
+    "companyDescription": "Keepers Logística aims to provide a memorable experience for our customers, substantially increasing their satisfaction, and above all, also caring about the satisfaction of our customers' customers.",
+    "servicesTitle": "Services",
+    "servicesList": ["Receiving", "Inspection", "Storage", "Handling", "Sorting"],
+    "addressTitle": "Address",
+    "addressDetails": ["Rua Texas, 111 - Jardim Rancho Alegre", "Santana de Parnaiba - SP", "CEP: 06515-200", "(11) 4151-9030", "comercial@keepers.com.br"],
+    "socialMediaAlt": {
+      "facebook": "Facebook Logo",
+      "linkedin": "LinkedIn Logo",
+      "instagram": "Instagram Logo"
+    },
+    "footerText": "Copyright ©2024 All rights reserved | Keepers Logística"
+  },
+  "whatsApp":{
+    "status": "Online now",
+    "text": "Do you have any questions or would like to request a free quote?",
+    "typing": "Type something..."
+  }
+}

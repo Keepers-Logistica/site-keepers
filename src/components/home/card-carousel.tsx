@@ -6,7 +6,7 @@ interface CardCarouselProps {
   title: string
   description: string
   img: string
-  topics: string[]
+  topics: any
 }
 
 export function CardCarousel({
@@ -26,7 +26,7 @@ export function CardCarousel({
           <p className="mb-5 mt-5 text-start leading-6 text-[#828282]">
             {description}
           </p>
-          {topics.map((topic, index) => (
+          {topics.map((topic: any, index: any) => (
             <div key={index} className="my-2 flex items-center gap-4">
               <CheckCircle className="h-6 w-6 text-emerald-400" />
               <span className="text-start">{topic}</span>
