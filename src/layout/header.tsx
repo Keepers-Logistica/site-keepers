@@ -144,7 +144,7 @@ export function Header() {
                       'text-dark': openNav,
                     })}
                   >
-                    (11) 4151 - 9030
+                    + 55 (11) 4151 - 9030
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
