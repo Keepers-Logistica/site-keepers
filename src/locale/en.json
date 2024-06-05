@@ -215,5 +215,8 @@
     "status": "Online now",
     "text": "Do you have any questions or would like to request a free quote?",
     "typing": "Type something..."
+  },
+  "langs":{
+    "header":"Languages"
   }
 }

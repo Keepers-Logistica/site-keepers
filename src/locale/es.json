@@ -1,0 +1,222 @@
+{
+  "navigation": {
+    "solutions": "Soluciones",
+    "ourSystem": "Nuestro Sistema",
+    "segments": "Segmentos",
+    "contact": "Contacto",
+    "aboutUs": "Quiénes Somos",
+    "accessSystem": "SISTEMA DE ACCESO"
+  },
+  "solutions": {
+    "receiving": {
+      "title": "Recepción",
+      "description": "Todas las actividades de recepción se realizan con agilidad y excelencia."
+    },
+    "inspection": {
+      "title": "Inspección",
+      "description": "Control estricto a través de inspecciones durante todo el manejo de materiales."
+    },
+    "storage": {
+      "title": "Almacenamiento",
+      "description": "Almacenamiento con eficiencia y tecnología de punta garantizando calidad operativa."
+    },
+    "handling": {
+      "title": "Manipulación",
+      "description": "Estamos preparados para diferentes demandas estacionales, pudiendo desarrollar líneas de ensamblaje específicas según las necesidades de cada cliente."
+    },
+    "picking": {
+      "title": "Selección",
+      "description": "Selección y preparación de pedidos de forma diferenciada."
+    },
+    "shipping": {
+      "title": "Envío",
+      "description": "Envío con compromiso, su producto en el lugar y tiempo correctos."
+    },
+    "distribution": {
+      "title": "Distribución",
+      "description": "Tenemos un amplio conocimiento en la distribución de pedidos."
+    },
+    "management": {
+      "title": "Gestión",
+      "description": "Con una herramienta moderna que permite un control integral."
+    }
+  },
+  "ourSystem": {
+    "title": "Integrador",
+    "description": "Nuestro sistema de integración de pedidos en tiempo real",
+    "features": {
+      "intuitiveInterface": {
+        "title": "Interfaz Intuitiva",
+        "description": "Amigable, rápida y fácil de usar."
+      },
+      "monitoring": {
+        "title": "Monitoreo",
+        "description": "Monitoree y rastree todos sus pedidos."
+      },
+      "updates": {
+        "title": "Actualizaciones",
+        "description": "Actualizaciones semanales con nuevas herramientas."
+      }
+    }
+  },
+  "heroSection": {
+    "heading": "¡Keepers siempre!",
+    "typewriter": [
+      "¡Negocios en evolución!",
+      "¡Optimizando procesos!",
+      "¡Envío de pedidos!",
+      "¡Integración de pedidos!"
+    ],
+    "button": "Nuestros servicios"
+  },
+  "aboutMeSection": {
+    "title": "Quiénes Somos",
+    "subtitle": "Un poco sobre nuestra historia",
+    "description": "Fundada en 1996, Keepers se ha establecido como uno de los principales operadores logísticos del país. Con el tiempo, Keepers Logística ha desarrollado un amplio conocimiento en logística de pedidos altamente fraccionada, destacándose por el uso de tecnologías de vanguardia en gestión de almacenes y desarrollo de operaciones. Nuestra capacidad para comprender, planificar y ejecutar se evidencia en nuestro enfoque personalizado, respetando las diversas necesidades de cada cliente. En Keepers, estamos comprometidos a brindar un nivel excepcional de servicio, superando los estándares nacionales y garantizando la satisfacción del cliente en todas las etapas de la cadena logística.",
+    "button": "Ver video"
+  },
+  "solutionSection": {
+    "title": "Servicios y Soluciones",
+    "buttons": [
+      {
+        "label": "Recepción",
+        "description": "Selección y preparación de pedidos de forma diferenciada, reduciendo sustancialmente el tiempo del ciclo de pedido, con un sistema preciso para localizar productos y métodos para transmitir pedidos a través de EDI, controles de nivel de inventario, asegurando procesos más eficientes y mayor agilidad en las entregas.",
+        "topics": [
+          "Gestión de solicitudes y ocurrencias",
+          "Procesamiento de pedidos",
+          "Recolección de artículos",
+          "Control de nivel de inventario"
+        ]
+      },
+      {
+        "label": "Inspección",
+        "description": "Keepers Logística realiza un estricto control a través de inspecciones durante todo el manejo de materiales, ofreciendo a sus clientes un nivel de precisión de inventario muy alto.",
+        "topics": [
+          "Verificación de volúmenes declarados en la factura",
+          "Inspección cuantitativa y cualitativa de materiales recibidos",
+          "Regularización de bienes recibidos"
+        ]
+      },
+      {
+        "label": "Almacenamiento",
+        "description": "Almacenamiento con eficiencia y tecnología de punta garantizando calidad operativa, además de contar con un área de almacenamiento con acceso restringido, cámaras de monitoreo y una alarma para productos de alto valor y atractivos.",
+        "topics": [
+          "Registro de artículo",
+          "Direccionamiento y almacenamiento",
+          "Inventario diario de artículos movidos",
+          "Direccionamiento de volumen"
+        ]
+      },
+      {
+        "label": "Manipulación",
+        "description": "Estamos preparados para diferentes demandas estacionales, pudiendo desarrollar líneas de ensamblaje específicas según las necesidades de cada cliente, siempre cumpliendo con los criterios de calidad más estrictos, integrando la logística con actividades complementarias.",
+        "topics": [
+          "Ensamblaje de kits",
+          "Selección",
+          "Desmontaje",
+          "Etiquetado"
+        ]
+      },
+      {
+        "label": "Selección",
+        "description": "Selección y preparación de pedidos de forma diferenciada, reduciendo sustancialmente el tiempo del ciclo de pedido, con un sistema preciso para localizar productos y métodos para transmitir pedidos a través de EDI, controles de nivel de inventario, asegurando procesos más eficientes y mayor agilidad en las entregas.",
+        "topics": [
+          "Gestión de solicitudes y ocurrencias",
+          "Procesamiento de pedidos",
+          "Recolección de artículos",
+          "Inspección de pedidos"
+        ]
+      },
+      {
+        "label": "Envío",
+        "description": "Keepers Logística realiza envíos con compromiso, asegurando que su producto esté en el lugar y momento correctos.",
+        "topics": [
+          "Agregar, pesar, empaquetar, ordenar y verificar el pedido",
+          "Impresión de documentos fiscales",
+          "Identificación, carga y despacho del vehículo",
+          "Gestión del transporte"
+        ]
+      },
+      {
+        "label": "Distribución",
+        "description": "Keepers Logística ha adquirido a lo largo de los años un amplio conocimiento en la distribución de pedidos en general, especialmente para pedidos altamente fraccionados, utilizando las herramientas más modernas en cuanto a tecnología. Keepers Logística garantiza la mejor experiencia, proporcionando una distribución altamente eficiente.",
+        "topics": [
+          "Distribución fraccionada",
+          "Logística inversa (devolución de pedidos)",
+          "Distribución intensiva"
+        ]
+      },
+      {
+        "label": "Gestión",
+        "description": "Keepers Logística cuenta con una herramienta moderna que permite una gestión integral, ágil y eficiente del stock, gestionando movimientos en todos los puntos y productividad en cada etapa, incluido todo el flujo fiscal.",
+        "topics": [
+          "Inicio de sesión individual y contraseña para cada nivel de usuario",
+          "Gestión de almacenamiento y control FIFO y LIFO",
+          "Control desde la garita hasta la entrega",
+          "Control de fabricación por lotes"
+        ]
+      }
+    ]
+  },
+  "numbersSection": {
+    "since": "desde",
+    "moreThan": "más de",
+    "realizing": "realizando",
+    "operations": "operaciones",
+    "products": "productos",
+    "stored": "almacenados",
+    "goods": "bienes",
+    "busy": "ocupado"
+  },
+  "segmentsSection": {
+    "title": "Segmentos"
+  },
+  "integradorSection": {
+    "title": "Un Sistema 100% en Línea",
+    "integrador": "Integrador",
+    "system_description": "Sistema de integración",
+    "detailed_description": "Nuestro sistema de integración de pedidos y facturas optimiza sus operaciones logísticas con eficiencia y precisión. Haga seguimiento de pedidos en tiempo real, emita facturas, genere informes detallados, cree nuevos pedidos, vea el inventario actualizado e importe y haga seguimiento de todas las facturas. Todo en una plataforma integrada con una interfaz intuitiva. Además, puede chatear directamente con nuestro equipo de soporte para obtener asistencia inmediata.",
+    "watch_video": "Ver video",
+    "access": "Acceder"
+  },
+  "roadSection": {
+    "title": "Nuestros Diferenciales"
+  },
+  "systemSection": {
+    "title": "Sistema Propietario",
+    "description": "Un sistema de integración de pedidos propietario ofrece total personalización, mayor eficiencia y control completo de datos, garantizando seguridad y confiabilidad. Con soporte técnico especializado, obtiene soluciones a medida para el éxito de su negocio."
+  },
+  "suportSection": {
+    "title": "Soporte",
+    "description": "Disponible a través de canales de soporte (Correo electrónico, Teléfono, Chat). ¿Tiene alguna pregunta? Simplemente póngase en contacto con nuestro",
+    "supportTeam": " Equipo de Soporte"
+  },
+  "contactMeSection": {
+    "interested": "¿Interesado?",
+    "contactUs": "Póngase en contacto con nosotros para",
+    "evolve": "EVOLUCIONAR",
+    "contactButton": "Contáctenos",
+    "decoratorAlt": "puntos grises"
+  },
+  "footerSection": {
+    "companyDescription": "Keepers Logística tiene como objetivo proporcionar una experiencia memorable para nuestros clientes, aumentando sustancialmente su satisfacción, y sobre todo, también preocupándose por la satisfacción de los clientes de nuestros clientes.",
+    "servicesTitle": "Servicios",
+    "servicesList": ["Recepción", "Inspección", "Almacenamiento", "Manipulación", "Selección"],
+    "addressTitle": "Dirección",
+    "addressDetails": ["Rua Texas, 111 - Jardim Rancho Alegre", "Santana de Parnaiba - SP", "CEP: 06515-200", "(11) 4151-9030", "comercial@keepers.com.br"],
+    "socialMediaAlt": {
+      "facebook": "Logotipo de Facebook",
+      "linkedin": "Logotipo de LinkedIn",
+      "instagram": "Logotipo de Instagram"
+    },
+    "footerText": "Derechos de autor ©2024 Todos los derechos reservados | Keepers Logística"
+  },
+  "whatsApp":{
+    "status": "En línea ahora",
+    "text": "¿Tiene alguna pregunta o desea solicitar un presupuesto gratuito?",
+    "typing": "Escriba algo..."
+  },
+  "langs":{
+    "header":"Idiomas"
+  }
+}

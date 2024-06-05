@@ -25,7 +25,7 @@ export function HeroSection() {
                 <span className="text-[#FFC9AB]">
                   <Typewriter
                     words={t('heroSection.typewriter', { returnObjects: true })}
-                    loop={5}
+                    loop
                     cursor
                     cursorStyle="_"
                     typeSpeed={70}

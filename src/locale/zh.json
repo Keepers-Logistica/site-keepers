@@ -1,0 +1,222 @@
+{
+  "navigation": {
+    "solutions": "解决方案",
+    "ourSystem": "我们的系统",
+    "segments": "领域",
+    "contact": "联系",
+    "aboutUs": "关于我们",
+    "accessSystem": "访问系统"
+  },
+  "solutions": {
+    "receiving": {
+      "title": "收货",
+      "description": "所有收货活动都以敏捷和卓越的方式进行。"
+    },
+    "inspection": {
+      "title": "检验",
+      "description": "通过在整个物料处理过程中进行检查，严格控制。"
+    },
+    "storage": {
+      "title": "储存",
+      "description": "高效和尖端技术的储存，确保运营质量。"
+    },
+    "handling": {
+      "title": "处理",
+      "description": "我们准备好应对不同的季节性需求，能够根据每个客户的需求开发特定的装配线。"
+    },
+    "picking": {
+      "title": "拣选",
+      "description": "以差异化的方式进行订单拣选和准备。"
+    },
+    "shipping": {
+      "title": "运输",
+      "description": "承诺发货，确保您的产品在正确的地点和时间。"
+    },
+    "distribution": {
+      "title": "分销",
+      "description": "我们在订单分销方面拥有广泛的专业知识。"
+    },
+    "management": {
+      "title": "管理",
+      "description": "采用现代化工具，实现全面控制。"
+    }
+  },
+  "ourSystem": {
+    "title": "集成器",
+    "description": "我们的实时订单集成系统",
+    "features": {
+      "intuitiveInterface": {
+        "title": "直观界面",
+        "description": "用户友好、快速、易于使用。"
+      },
+      "monitoring": {
+        "title": "监控",
+        "description": "监控和跟踪所有您的订单。"
+      },
+      "updates": {
+        "title": "更新",
+        "description": "每周更新新工具。"
+      }
+    }
+  },
+  "heroSection": {
+    "heading": "Keepers永远！",
+    "typewriter": [
+      "业务不断发展！",
+      "优化流程！",
+      "发货订单！",
+      "整合订单！"
+    ],
+    "button": "我们的服务"
+  },
+  "aboutMeSection": {
+    "title": "关于我们",
+    "subtitle": "关于我们的一点历史",
+    "description": "成立于1996年，Keepers已经成为该国领先的物流运营商之一。多年来，Keepers物流在高度分离的订单物流方面积累了丰富的专业知识，在仓储管理和运营开发方面使用尖端技术脱颖而出。我们理解、计划和执行的能力通过我们的个性化方法得以体现，尊重每个客户的多样化需求。在Keepers，我们致力于提供卓越的服务水平，超越国家标准，确保在物流链的所有阶段都能让客户满意。",
+    "button": "观看视频"
+  },
+  "solutionSection": {
+    "title": "服务与解决方案",
+    "buttons": [
+      {
+        "label": "收货",
+        "description": "以差异化的方式进行订单拣选和准备，大大缩短订单周期时间，使用准确的产品定位系统和通过EDI传输订单的方法，库存水平控制，确保更高效的流程、更快速的交付。",
+        "topics": [
+          "处理请求和事件",
+          "订单处理",
+          "商品收集",
+          "库存水平控制"
+        ]
+      },
+      {
+        "label": "检验",
+        "description": "通过在整个物料处理过程中进行检查，严格控制，为客户提供非常高的库存准确性水平。",
+        "topics": [
+          "检查发票中声明的容量",
+          "对收到的材料进行数量和质量检查",
+          "收到货物的规范化"
+        ]
+      },
+      {
+        "label": "储存",
+        "description": "高效和尖端技术的储存，确保运营质量，此外还具有限制访问的存储区域、监控摄像头和高价值和吸引力产品的报警。",
+        "topics": [
+          "商品注册",
+          "寻址和存储",
+          "每日移动商品的库存",
+          "卷寻址"
+        ]
+      },
+      {
+        "label": "处理",
+        "description": "我们准备好应对不同的季节性需求，能够根据每个客户的需求开发特定的装配线，始终符合最严格的质量标准，将物流与补充活动相结合。",
+        "topics": [
+          "组件装配",
+          "选择",
+          "拆解",
+          "标签"
+        ]
+      },
+      {
+        "label": "拣选",
+        "description": "以差异化的方式进行订单拣选和准备，大大缩短订单周期时间，使用准确的产品定位系统和通过EDI传输订单的方法，库存水平控制，确保更高效的流程、更快速的交付。",
+        "topics": [
+          "处理请求和事件",
+          "订单处理",
+          "商品收集",
+          "订单检查"
+        ]
+      },
+      {
+        "label": "运输",
+        "description": "Keepers物流承诺发货，确保您的产品在正确的地点和时间。",
+        "topics": [
+          "聚合、称重、包装、订单和检查订单",
+          "打印税务文件",
+          "识别、装载和派车",
+          "运输管理"
+        ]
+      },
+      {
+        "label": "分销",
+        "description": "Keepers物流多年来在订单分销方面拥有丰富的专业知识，特别是对于高度分离的订单，使用技术方面最先进的工具。Keepers物流保证提供最佳体验，提供高效的分销。",
+        "topics": [
+          "分数分销",
+          "逆向物流（订单退回）",
+          "密集分销"
+        ]
+      },
+      {
+        "label": "管理",
+        "description": "Keepers物流拥有一种现代化工具，可以实现全面、敏捷和高效的库存管理，在所有点和每个阶段的生产力管理，包括整个财务流程。",
+        "topics": [
+          "每个用户级别的单独登录和密码",
+          "仓储管理和FIFO和LIFO控制",
+          "从门卫到交货的控制",
+          "批次制造控制"
+        ]
+      }
+    ]
+  },
+  "numbersSection": {
+    "since": "自",
+    "moreThan": "超过",
+    "realizing": "实现",
+    "operations": "操作",
+    "products": "产品",
+    "stored": "存储",
+    "goods": "商品",
+    "busy": "繁忙"
+  },
+  "segmentsSection": {
+    "title": "领域"
+  },
+  "integradorSection": {
+    "title": "一个100%在线系统",
+    "integrador": "积分器",
+    "system_description": "集成系统",
+    "detailed_description": "我们的订单和发票集成系统通过高效和精确的方式优化您的物流运营。实时跟踪订单，发票开具，生成详细报告，创建新订单，查看更新的库存，并导入和跟踪所有发票。所有这些都在一个集成的平台上，具有直观的界面。此外，您还可以直接与我们的支持人员进行聊天，以获取即时帮助。",
+    "watch_video": "观看视频",
+    "access": "访问"
+  },
+  "roadSection": {
+    "title": "我们的优势"
+  },
+  "systemSection": {
+    "title": "专有系统",
+    "description": "专有订单集成系统提供了全面定制、更高效和完全数据控制，确保安全可靠。通过专业的技术支持，您可以获得量身定制的解决方案，为您的业务成功提供支持。"
+  },
+  "suportSection": {
+    "title": "支持",
+    "description": "通过支持渠道（电子邮件、电话、聊天）提供支持。有任何问题？只需联系我们的",
+    "supportTeam": " 支持团队"
+  },
+  "contactMeSection": {
+    "interested": "有兴趣吗？",
+    "contactUs": "联系我们以",
+    "evolve": "发展",
+    "contactButton": "联系我们",
+    "decoratorAlt": "灰色点"
+  },
+  "footerSection": {
+    "companyDescription": "Keepers物流旨在为我们的客户提供难忘的体验，大大提高他们的满意度，更重要的是，还关心我们客户的客户的满意度。",
+    "servicesTitle": "服务",
+    "servicesList": ["收货", "检验", "储存", "处理", "分拣"],
+    "addressTitle": "地址",
+    "addressDetails": ["Rua Texas, 111 - Jardim Rancho Alegre", "Santana de Parnaiba - SP", "CEP: 06515-200", "(11) 4151-9030", "comercial@keepers.com.br"],
+    "socialMediaAlt": {
+      "facebook": "Facebook徽标",
+      "linkedin": "LinkedIn徽标",
+      "instagram": "Instagram徽标"
+    },
+    "footerText": "版权所有 ©2024 保留所有权利 | Keepers物流"
+  },
+  "whatsApp":{
+    "status": "现在在线",
+    "text": "有任何问题或想要请求免费报价吗？",
+    "typing": "输入一些内容..."
+  },
+  "langs":{
+    "header":"语言"
+  }
+}

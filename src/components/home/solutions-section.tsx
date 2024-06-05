@@ -200,13 +200,13 @@ export function SoluctionSection() {
           />
         </div>
         {isDesktop && (
-          <section className="m-auto max-w-[1100px] overflow-visible">
+          <section className="m-auto max-w-[950px] overflow-visible">
             <Swiper
               ref={swiperRef}
               modules={[Autoplay]}
               autoplay={{
                 delay: 2000,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
                 pauseOnMouseEnter: false,
                 stopOnLastSlide: false,
                 waitForTransition: true,

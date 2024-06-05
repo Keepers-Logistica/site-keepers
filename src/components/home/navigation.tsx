@@ -81,7 +81,6 @@ export function Navigation() {
   return (
     <div className="mt-20 flex items-center justify-center lg:justify-between">
       <img src={LogoKeepers} alt="logo keepers" />
-
       <nav className="hidden items-center lg:flex">
         <NavigationMenu>
           <NavigationMenuList>
@@ -111,19 +110,16 @@ export function Navigation() {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
+                  <li className="row-span-3 ">
                     <NavigationMenuLink asChild>
-                      <a
-                        className="bg-integrador flex h-full w-full select-none flex-col justify-end rounded-md from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
+                      <span className="bg-integrador flex h-[265.5px] w-full select-none flex-col justify-end rounded-md from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                         <div className="font-title text-md mb-2 mt-4 font-semibold text-white">
                           {t('ourSystem.title')}
                         </div>
                         <p className="text-sm leading-tight text-zinc-400">
                           {t('ourSystem.description')}
                         </p>
-                      </a>
+                      </span>
                     </NavigationMenuLink>
                   </li>
                   <ListItem
@@ -160,7 +156,6 @@ export function Navigation() {
                   {t('navigation.aboutUs')}
                 </Link>
               </NavigationMenuTrigger>
-              <NavigationMenuContent></NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

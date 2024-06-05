@@ -171,7 +171,7 @@ button{
 }
 
 
-#root > main > section > div.overflow-hidden.relative.m-auto.block > div > div > div > div > div > section.m-auto.max-w-\[1100px\].overflow-visible > div > div > div.swiper-slide.swiper-slide-active{
+#root > main > section > div.overflow-hidden.relative.m-auto.block > div > div > div > div > div > section > div > div > div.swiper-slide.swiper-slide-active{
   transition: 1.5s all;
   transform: scale(1.1);
 }

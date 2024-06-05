@@ -215,5 +215,8 @@
     "status": "Online agora",
     "text": "Tem alguma dúvida ou deseja fazer um orçamento sem compromisso ?",
     "typing": "Digite algo.."
+  },
+  "langs":{
+    "header":"Idiomas"
   }
 }

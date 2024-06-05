@@ -71,7 +71,7 @@ export function IntegradorSection() {
               <Dialog>
                 <DialogTrigger asChild>
                   <Button className="font-title mt-11 w-fit bg-[#FF5D04] px-14 py-5 font-semibold">
-                    {t('integradorSection.watch_video')}{' '}
+                    {t('integradorSection.watch_video')}
                     <PlayCircle className="ml-2 h-5 w-5" />
                   </Button>
                 </DialogTrigger>
