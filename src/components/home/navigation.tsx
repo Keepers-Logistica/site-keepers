@@ -157,6 +157,11 @@ export function Navigation() {
                 </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger noChevron className="text-white">
+                <RouterLink to="/blog">{t('navigationBlog.blog')}</RouterLink>
+              </NavigationMenuTrigger>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 

@@ -87,15 +87,7 @@ export function Header() {
             'shadow-xl': openNav,
           })}
         >
-          <div
-            className={clsx(
-              'z-50 flex h-9 w-full transition-colors duration-500',
-              {
-                'bg-black/30': !openNav,
-                'bg-white': openNav,
-              },
-            )}
-          >
+          <div className="z-50 flex h-9 w-full bg-white transition-colors">
             <div className="m-auto flex w-[1440px] items-center justify-between px-20">
               <div className=" flex items-center gap-2 ">
                 <RouterLink
@@ -104,7 +96,7 @@ export function Header() {
                 >
                   <FacebookLogo
                     className="h-5 w-5 transition-colors"
-                    color={openNav ? 'dark' : 'white'}
+                    color="dark"
                   />
                 </RouterLink>
                 <RouterLink
@@ -113,7 +105,7 @@ export function Header() {
                 >
                   <InstagramLogo
                     className="h-5 w-5  transition-colors"
-                    color={openNav ? 'dark' : 'white'}
+                    color="dark"
                   />
                 </RouterLink>
                 <RouterLink
@@ -122,7 +114,7 @@ export function Header() {
                 >
                   <LinkedinLogo
                     className="h-5 w-5  transition-colors"
-                    color={openNav ? 'dark' : 'white'}
+                    color="dark"
                   />
                 </RouterLink>
                 <RouterLink
@@ -131,7 +123,7 @@ export function Header() {
                 >
                   <YoutubeLogo
                     className="h-5 w-5  transition-colors"
-                    color={openNav ? 'dark' : 'white'}
+                    color="dark"
                   />
                 </RouterLink>
               </div>
@@ -141,15 +133,7 @@ export function Header() {
                     value={currentLanguage}
                     onValueChange={handleChangeLanguage}
                   >
-                    <SelectTrigger
-                      className={clsx(
-                        'font-title border-none font-medium uppercase',
-                        {
-                          'text-white': !openNav,
-                          'text-dark': openNav,
-                        },
-                      )}
-                    >
+                    <SelectTrigger className="font-title text-dark border-none font-medium uppercase">
                       <SelectValue>{currentLanguage}</SelectValue>
                     </SelectTrigger>
                     <SelectContent>
@@ -198,78 +182,27 @@ export function Header() {
                       </SelectGroup>
                     </SelectContent>
                   </Select>
-                  {currentLanguage === 'pt' && (
-                    <img
-                      className="h-[20px] w-[30px] rounded-md"
-                      src={BrazilFlag}
-                      alt="brazil flag"
-                    />
-                  )}
-                  {currentLanguage === 'en' && (
-                    <img
-                      className="h-[20px] w-[30px] rounded-md"
-                      src={EuaFlag}
-                      alt="eua flag"
-                    />
-                  )}
-                  {currentLanguage === 'es' && (
-                    <img
-                      className="h-[20px] w-[30px] rounded-md"
-                      src={SpainFlag}
-                      alt="spain flag"
-                    />
-                  )}
-                  {currentLanguage === 'zh' && (
-                    <img
-                      className="h-[20px] w-[30px] rounded-md"
-                      src={ChinaFlag}
-                      alt="eua flag"
-                    />
-                  )}
+                  <CountryFlag />
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone
-                    color={openNav ? 'dark' : 'white'}
-                    className="h-5 w-5"
-                  />
-                  <span
-                    className={clsx('text-xs font-medium', {
-                      'text-white': !openNav,
-                      'text-dark': openNav,
-                    })}
-                  >
+                  <Phone color="dark" className="h-5 w-5" />
+                  <span className="text-dark text-xs font-medium">
                     + 55 (11) 4151 - 9030
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <EnvelopeSimple
-                    className="h-5 w-5"
-                    color={openNav ? 'dark' : 'white'}
-                  />
-                  <span
-                    className={clsx('text-xs font-medium', {
-                      'text-white': !openNav,
-                      'text-dark': openNav,
-                    })}
-                  >
+                  <EnvelopeSimple className="h-5 w-5" color="dark" />
+                  <span className="text-dark text-xs font-medium">
                     comercial@keepers.com.br
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: '-100px' }}
-            animate={openNav ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-            className="relative z-0 flex h-16 items-center justify-between bg-[#FF5D04]"
-          >
+          <div className="relative z-0 flex h-16 items-center justify-between bg-[#FF5D04]">
             <div className="m-auto flex w-[1440px] justify-between px-20">
               <Link to="home" spy={true} smooth={true} duration={500}>
                 <motion.img
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={openNav ? { scale: 1, opacity: 1 } : {}}
-                  transition={{ duration: 1, delay: 0.5 }}
                   src={KeeperLogoNavImg}
                   alt="logo keepers K"
                   className="w-[120px] cursor-pointer"
@@ -280,63 +213,9 @@ export function Header() {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="about-me"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.aboutUs')}
-                        </Link>
-                      </NavigationMenuTrigger>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="solutions"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.solutions')}
-                        </Link>
-                      </NavigationMenuTrigger>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="segments"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.segments')}
-                        </Link>
-                      </NavigationMenuTrigger>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="integrador"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.ourSystem')}
-                        </Link>
-                      </NavigationMenuTrigger>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="contact"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.contact')}
-                        </Link>
+                        <RouterLink to="/">
+                          {t('navigationBlog.home')}
+                        </RouterLink>
                       </NavigationMenuTrigger>
                     </NavigationMenuItem>
                   </NavigationMenuList>
@@ -352,7 +231,7 @@ export function Header() {
                 </Button>
               </nav>
             </div>
-          </motion.div>
+          </div>
         </header>
       </Desktop>
       {isMobile && (

@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import { AppLayout } from './layout'
+import { AppLayout } from './layout/app-layout'
+import { BlogLayout } from './layout/blog-layout'
+import { Blog } from './pages/blog'
 import { Error } from './pages/error'
 import { Home } from './pages/home'
 import { NotFound } from './pages/not-found'
@@ -17,6 +19,18 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '/',
+    element: <BlogLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/blog',
+        element: <Blog />,
+      },
+    ],
+  },
+
   {
     path: '*',
     element: <NotFound />,

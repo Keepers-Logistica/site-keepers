@@ -218,5 +218,9 @@
   },
   "langs":{
     "header":"语言"
+  },
+  "navigationBlog": {
+    "home": "家",
+    "blog": "博客"
   }
 }
