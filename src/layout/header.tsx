@@ -281,24 +281,24 @@ export function Header() {
                     <NavigationMenuItem>
                       <NavigationMenuTrigger noChevron className="text-white">
                         <Link
-                          to="solutions"
+                          to="about-me"
                           spy={true}
                           smooth={true}
                           duration={500}
                         >
-                          {t('navigation.solutions')}
+                          {t('navigation.aboutUs')}
                         </Link>
                       </NavigationMenuTrigger>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger noChevron className="text-white">
                         <Link
-                          to="integrador"
+                          to="solutions"
                           spy={true}
                           smooth={true}
                           duration={500}
                         >
-                          {t('navigation.ourSystem')}
+                          {t('navigation.solutions')}
                         </Link>
                       </NavigationMenuTrigger>
                     </NavigationMenuItem>
@@ -317,24 +317,25 @@ export function Header() {
                     <NavigationMenuItem>
                       <NavigationMenuTrigger noChevron className="text-white">
                         <Link
+                          to="integrador"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          {t('navigation.ourSystem')}
+                        </Link>
+                      </NavigationMenuTrigger>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger noChevron className="text-white">
+                        <Link
                           to="contact"
                           spy={true}
                           smooth={true}
                           duration={500}
                         >
                           {t('navigation.contact')}
-                        </Link>
-                      </NavigationMenuTrigger>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger noChevron className="text-white">
-                        <Link
-                          to="about-me"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                        >
-                          {t('navigation.aboutUs')}
                         </Link>
                       </NavigationMenuTrigger>
                     </NavigationMenuItem>
