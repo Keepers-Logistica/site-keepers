@@ -6,6 +6,7 @@ import { Outlet } from 'react-router'
 import LogoKeepersDark from '@/assets/images/logo.svg'
 
 import { Header } from '../components/home/header'
+import { Footer } from './footer'
 
 export function AppLayout() {
   const {
@@ -41,6 +42,7 @@ export function AppLayout() {
           notification
           notificationSound
         />
+        <Footer />
       </section>
     </main>
   )

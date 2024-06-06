@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import Logo from '@/assets/images/logo.svg'
 import LogoKeepersImg from '@/assets/images/logo-keepers.svg'
 
-import { Separator } from '../ui/separator'
+import { Separator } from '../components/ui/separator'
 
 export function Footer() {
   const { t } = useTranslation()

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Outlet } from 'react-router'
 
 import { Header } from '../components/blog/header'
+import { Footer } from './footer'
 
 export function BlogLayout() {
   const {
@@ -23,10 +24,11 @@ export function BlogLayout() {
   }, [])
 
   return (
-    <main>
+    <main className="pt-[100px]">
       <Header />
-      <section>
+      <section className="h-full overflow-hidden">
         <Outlet />
+        <Footer />
       </section>
     </main>
   )
