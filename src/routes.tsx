@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './layout/app-layout'
 import { BlogLayout } from './layout/blog-layout'
+import { Article } from './pages/article'
 import { Blog } from './pages/blog'
 import { Error } from './pages/error'
 import { Home } from './pages/home'
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog />,
+      },
+      {
+        path: '/article/:articleId',
+        element: <Article />,
       },
     ],
   },

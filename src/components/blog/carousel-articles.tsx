@@ -1,5 +1,5 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
