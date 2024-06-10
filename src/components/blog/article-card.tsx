@@ -13,7 +13,7 @@ interface BlogCardProps {
   title: string
   subtitle?: string
   thumbnail: string
-  slug: string
+  id: number
   long?: boolean
 }
 
@@ -21,7 +21,7 @@ export function ArticleCard({
   title,
   subtitle,
   thumbnail,
-  slug,
+  id,
   long,
 }: BlogCardProps) {
   const { formatEllipsis } = useFormatter()
@@ -33,14 +33,14 @@ export function ArticleCard({
       className={clsx(
         'group w-full cursor-pointer transition-colors duration-500',
         {
-          'col-span-12': long,
-          'col-span-6': !long,
+          'col-span-12 lg:col-span-12': long,
+          'col-span-12 lg:col-span-6': !long,
         },
       )}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
     >
-      <Link to={`/article/${slug}`}>
+      <Link to={`/article/${id}`}>
         <Card className="bg-trasparent h-[436px] w-full rounded-lg shadow-lg ">
           <img
             src={env.VITE_CMS_API + thumbnail}

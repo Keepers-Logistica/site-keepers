@@ -19,7 +19,7 @@ export function CarouselArticles() {
   }
 
   return (
-    <div className="relative w-screen">
+    <div className="relative m-auto w-screen max-w-[1440px] ">
       <Swiper
         ref={swiperRef}
         navigation={true}

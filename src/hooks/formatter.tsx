@@ -78,6 +78,11 @@ export function useFormatter() {
     return language
   }
 
+  function formatTextWithLineBreaks(text: string | undefined) {
+    if (!text) return ''
+    return text.replace(/\. ?/g, '.\n')
+  }
+
   return {
     humanizeDate,
     humanizeDistanceDate,
@@ -87,5 +92,6 @@ export function useFormatter() {
     parsePercentage,
     formatEllipsis,
     formatI18nNextForCms,
+    formatTextWithLineBreaks,
   }
 }

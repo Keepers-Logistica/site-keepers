@@ -27,7 +27,10 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
   }
 
   return (
-    <div className="px-10 py-5 lg:px-40 lg:py-10" ref={ref}>
+    <div
+      className="m-auto max-w-[1440px] px-10 py-5 lg:px-0 lg:py-10"
+      ref={ref}
+    >
       <div className="mt-4 flex flex-col items-start justify-start">
         <div className="flex">
           <figure className="mr-4 h-12 w-3 rounded-sm bg-orange-500" />

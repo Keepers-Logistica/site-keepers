@@ -56,8 +56,8 @@ export function ArticlesSection({ search }: ArticlesSectionProps) {
   }, [search, page])
 
   return (
-    <section className="w-full ">
-      <div className="mb-10 grid grid-cols-12 gap-x-10 gap-y-10  px-10 lg:px-40">
+    <section className="m-auto w-full max-w-[1440px]">
+      <div className="mb-10 grid grid-cols-12 gap-x-10 gap-y-10  px-10 lg:px-0">
         {isLoadingArticles ? (
           <>
             {Array.from({ length: 10 }).map((_, i) => {
@@ -81,7 +81,7 @@ export function ArticlesSection({ search }: ArticlesSectionProps) {
                   title={article.attributes.title}
                   subtitle={article.attributes.subtitle}
                   long={(i + 1) % 3 === 0}
-                  slug={article.attributes.slug}
+                  id={article.id}
                   thumbnail={article.attributes.thumbnail.data.attributes.url}
                 />
               )
