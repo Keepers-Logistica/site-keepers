@@ -218,6 +218,13 @@ export function Header() {
                         </RouterLink>
                       </NavigationMenuTrigger>
                     </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger noChevron className="text-white">
+                        <RouterLink to="/blog">
+                          {t('navigationBlog.articles')}
+                        </RouterLink>
+                      </NavigationMenuTrigger>
+                    </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
 

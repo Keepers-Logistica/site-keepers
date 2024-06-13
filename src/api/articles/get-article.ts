@@ -12,11 +12,16 @@ export const getArticle = createAsyncThunk<
   ResponseApi<Article>,
   GetArticlesBody
 >('article/get', async ({ id }: GetArticlesBody) => {
-  const fields = ['big_image', 'section_images', 'related_articles']
-
   const { data } = await api.get(`api/articles/${id}`, {
     params: {
-      populate: fields,
+      populate: {
+        related_articles: {
+          populate: 'thumbnail',
+        },
+        thumbnail: true,
+        big_image: true,
+        section_images: true,
+      },
     },
   })
 

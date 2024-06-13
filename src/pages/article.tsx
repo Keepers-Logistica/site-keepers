@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { toast } from 'sonner'
 
 import { getArticle } from '@/api/articles/get-article'
-import { getRelatedArticles } from '@/api/articles/get-related-articles'
 import { OtherArticles } from '@/components/article/other-articles'
 import { Article as ArticleEntity } from '@/entities/articles'
 import { env } from '@/env'
@@ -33,7 +32,11 @@ export function Article() {
 
   useEffect(() => {
     fetchArticle()
-  }, [])
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [articleId])
 
   return (
     <main className="m-auto max-w-[1440px] px-10 lg:px-20">
@@ -50,7 +53,7 @@ export function Article() {
           env.VITE_CMS_API + article?.attributes.big_image.data.attributes.url
         }
         alt="banner principal"
-        className="rounded-lg"
+        className="w-full rounded-lg"
       />
       <section className="my-20 flex items-center justify-center">
         <p className="text-dark w-[842px]  whitespace-pre-wrap text-xl font-medium leading-[160%]">

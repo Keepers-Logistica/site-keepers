@@ -14,7 +14,8 @@ export interface Article {
     publishedAt: string
     locale: string
     big_image: ImageCms
-    section_images: ImageCms[]
+    section_images: ImageCms[] | any
+    related_articles: any
     thumbnail: ImageCms
     user: UserCms
   }

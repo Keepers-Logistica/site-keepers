@@ -221,6 +221,13 @@
   },
   "navigationBlog": {
     "home": "Home",
-    "blog": "Blog"
+    "blog": "Blog",
+    "articles": "Artigos"
+  },
+  "articlesSection": {
+    "title": "Artigos",
+    "subtitle": "Pesquise os artigos do seu interrese ou veja as ultimas noticias !",
+    "placeholder": "Pesquise o artigo aqui...",
+    "search": "Pesquisar"
   }
 }

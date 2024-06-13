@@ -221,6 +221,13 @@
   },
   "navigationBlog": {
     "home": "家",
-    "blog": "博客"
+    "blog": "博客",
+    "articles": "文章"
+  },
+  "articlesSection": {
+    "title": "文章",
+    "subtitle": "搜索您感兴趣的文章或查看最新消息！",
+    "placeholder": "在这里搜索文章...",
+    "search": "搜索"
   }
 }

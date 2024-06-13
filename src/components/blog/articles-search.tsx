@@ -1,6 +1,7 @@
 import { MagnifyingGlass } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 import { z } from 'zod'
 
@@ -20,6 +21,8 @@ type SearchFormSchema = z.infer<typeof searchFormSchema>
 export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
   const { ref, inView } = useInView()
 
+  const { t } = useTranslation()
+
   const { register, handleSubmit } = useForm<SearchFormSchema>()
 
   function handleSearch({ search }: SearchFormSchema) {
@@ -28,7 +31,7 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
 
   return (
     <div
-      className="m-auto max-w-[1440px] px-10 py-5 lg:px-0 lg:py-10"
+      className="m-auto max-w-[1440px] px-10 py-5 lg:px-20 lg:py-10"
       ref={ref}
     >
       <div className="mt-4 flex flex-col items-start justify-start">
@@ -40,7 +43,7 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Artigos
+            {t('articlesSection.title')}
           </motion.h1>
         </div>
         <motion.h4
@@ -49,7 +52,7 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Pesquise os artigos do seu interrese ou veja as ultimas noticias !
+          {t('articlesSection.subtitle')}
         </motion.h4>
       </div>
       <form
@@ -59,7 +62,7 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
         <div className="col-span-12 lg:col-span-10 lg:pr-6">
           <Input
             className="h-12"
-            placeholder="Pesquise o artigo aqui..."
+            placeholder={t('articlesSection.placeholder')}
             {...register('search')}
           />
         </div>
@@ -69,7 +72,8 @@ export function ArticlesSearch({ setSearch }: ArticlesSearchProps) {
             type="submit"
             className="font-title h-12 w-full bg-[#FF5D04] font-semibold lg:h-full"
           >
-            Pesquisar <MagnifyingGlass className="ml-2 h-5 w-5" />
+            {t('articlesSection.search')}{' '}
+            <MagnifyingGlass className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </form>

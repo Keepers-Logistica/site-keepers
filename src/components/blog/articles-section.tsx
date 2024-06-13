@@ -57,7 +57,7 @@ export function ArticlesSection({ search }: ArticlesSectionProps) {
 
   return (
     <section className="m-auto w-full max-w-[1440px]">
-      <div className="mb-10 grid grid-cols-12 gap-x-10 gap-y-10  px-10 lg:px-0">
+      <div className="mb-10 grid grid-cols-12 gap-x-10 gap-y-10  px-10 lg:px-20">
         {isLoadingArticles ? (
           <>
             {Array.from({ length: 10 }).map((_, i) => {
@@ -74,7 +74,7 @@ export function ArticlesSection({ search }: ArticlesSectionProps) {
           </>
         ) : (
           <>
-            {articles.map((article, i) => {
+            {articles.map((article: any, i: any) => {
               return (
                 <ArticleCard
                   key={article.id}

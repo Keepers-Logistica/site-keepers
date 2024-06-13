@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export function CarouselArticles() {
-  const swiperRef = useRef(null)
+  const swiperRef = useRef<any>(null)
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {

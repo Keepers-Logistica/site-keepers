@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { env } from '@/env'
 
 interface OtherArticlesProps {
@@ -12,49 +14,29 @@ export function OtherArticles({ relateds }: OtherArticlesProps) {
       </h2>
       <div className="mb-20 flex flex-col items-center justify-between space-y-8 lg:flex-row lg:space-y-0">
         {relateds &&
-          relateds.map((related, index) => {
-            const { attributes } = related
-
+          relateds.map((related: any, index: any) => {
             return (
               <div className="lg:w-[32%]" key={index}>
-                <span>{attributes}</span>
-                <img
-                  src={env.VITE_CMS_API + related}
-                  alt="banner principal"
-                  className="w-[430px] rounded-lg"
-                />
-                <h4 className="text-dark mt-4 font-semibold">Titulo</h4>
-                <span className="text-zinc-400">Lorem ipsum, dolor sit</span>
+                <Link to={`/article/${related.id}`}>
+                  <img
+                    src={
+                      env.VITE_CMS_API +
+                      related.attributes.thumbnail.data.attributes.formats
+                        .thumbnail.url
+                    }
+                    alt="banner principal"
+                    className="h-[285px] w-[430px] rounded-lg object-cover"
+                  />
+                  <h4 className="text-dark mt-4 font-semibold">
+                    {related.attributes.title}
+                  </h4>
+                  <span className="text-zinc-400">
+                    {related.attributes.subtitle}
+                  </span>
+                </Link>
               </div>
             )
           })}
-        {/* <div className="lg:w-[32%]">
-          <img
-            src={env.VITE_CMS_API + articleOne}
-            alt="banner principal"
-            className="w-[430px] rounded-lg"
-          />
-          <h4 className="text-dark mt-4 font-semibold">Titulo</h4>
-          <span className="text-zinc-400">Lorem ipsum, dolor sit</span>
-        </div>
-        <div className="lg:w-[32%]">
-          <img
-            src={env.VITE_CMS_API + articleTwo}
-            alt="banner principal"
-            className="w-[430px] rounded-lg"
-          />
-          <h4 className="text-dark mt-4 font-semibold">Titulo</h4>
-          <span className="text-zinc-400">Lorem ipsum, dolor sit</span>
-        </div>
-        <div className="lg:w-[32%]">
-          <img
-            src={env.VITE_CMS_API + articleThird}
-            alt="banner principal"
-            className="w-[430px] rounded-lg"
-          />
-          <h4 className="text-dark mt-4 font-semibold">Titulo</h4>
-          <span className="text-zinc-400">Lorem ipsum, dolor sit</span>
-        </div> */}
       </div>
     </div>
   )

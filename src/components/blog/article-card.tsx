@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 import { env } from '@/env'
 import { useFormatter } from '@/hooks/formatter'
-import { article } from '@/store/articles/artcile-slice'
 
 import { Card } from '../ui/card'
 
